@@ -105,7 +105,7 @@ body {
 }
 
 .hero-profile-picture {
-    width: 180px;
+    width: 270px;
     height: auto;
     object-fit: cover;
     border-radius: 12px;
@@ -509,7 +509,7 @@ section {
     }
 
     .hero-profile-picture {
-        width: 120px;
+        width: 180px;
     }
 
     .hero-title {
