@@ -5,21 +5,21 @@
 }
 
 :root {
-    --bg-primary: #0a0e1a;
-    --bg-secondary: #111827;
-    --bg-tertiary: #1a202e;
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-tertiary: #121212;
     --text-primary: #f9fafb;
     --text-secondary: #d1d5db;
     --text-tertiary: #9ca3af;
-    --accent-primary: #10b981;
-    --accent-secondary: #06d6a0;
-    --accent-hover: #059669;
-    --border-color: #374151;
-    --card-bg: #1a202e;
+    --accent-primary: #00ff9f;
+    --accent-secondary: #00d084;
+    --accent-hover: #00b371;
+    --border-color: #1a1a1a;
+    --card-bg: #0f0f0f;
 }
 
 body {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Playfair Display', serif;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
@@ -112,7 +112,7 @@ body {
     border: 3px solid var(--accent-primary);
     box-shadow: 0 20px 60px rgba(16, 185, 129, 0.3);
     flex-shrink: 0;
-    transform: translateY(0.5cm);
+    transform: translateY(0.25cm);
 }
 
 .hero-content {
