@@ -196,8 +196,18 @@ section {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr;
     gap: 3rem;
+    align-items: start;
+}
+
+.profile-picture {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--accent-primary);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
 }
 
 .about-text p {
@@ -496,6 +506,12 @@ section {
 
     .about-grid {
         grid-template-columns: 1fr;
+    }
+
+    .profile-picture {
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
     }
 
     .timeline-grid {
