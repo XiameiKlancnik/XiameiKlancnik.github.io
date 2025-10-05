@@ -97,6 +97,23 @@ body {
     border-radius: 50%;
 }
 
+.hero-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-profile-picture {
+    width: auto;
+    height: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--accent-primary);
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.3);
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
@@ -196,18 +213,8 @@ section {
 
 .about-grid {
     display: grid;
-    grid-template-columns: auto 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    align-items: start;
-}
-
-.profile-picture {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid var(--accent-primary);
-    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
 }
 
 .about-text p {
@@ -496,6 +503,17 @@ section {
         font-size: 0.9rem;
     }
 
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-profile-picture {
+        width: 100%;
+        max-height: none;
+        height: auto;
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
@@ -506,12 +524,6 @@ section {
 
     .about-grid {
         grid-template-columns: 1fr;
-    }
-
-    .profile-picture {
-        width: 100%;
-        height: auto;
-        margin-bottom: 2rem;
     }
 
     .timeline-grid {
