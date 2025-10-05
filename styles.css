@@ -100,7 +100,8 @@ body {
 .hero-grid {
     display: flex;
     gap: 2rem;
-    align-items: start;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-profile-picture {
