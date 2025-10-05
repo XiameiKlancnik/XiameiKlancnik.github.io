@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingestigate Demo - Xiamei Klancnik</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .demo-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        .demo-content {
+            padding: 4rem 0;
+        }
+
+        .demo-section {
+            background-color: var(--card-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        .demo-section h2 {
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .demo-section h3 {
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .demo-section p, .demo-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .demo-section ul {
+            margin-left: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background-color: rgba(16, 185, 129, 0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--accent-primary);
+        }
+
+        .feature-card h4 {
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-tertiary);
+            font-size: 0.95rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background-color: var(--bg-tertiary);
+            color: var(--accent-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--accent-primary);
+        }
+
+        .screenshot-placeholder {
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+            border: 2px dashed var(--border-color);
+            border-radius: 12px;
+            padding: 4rem;
+            text-align: center;
+            color: var(--text-tertiary);
+            margin: 2rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-secondary);
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Xiamei Klancnik</div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="demo-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+            <h1 class="hero-title" style="font-size: 3rem;">Ingestigate</h1>
+            <p class="hero-description">LLM-Driven Food Intelligence App</p>
+        </div>
+    </section>
+
+    <section class="demo-content">
+        <div class="container">
+            <div class="demo-section">
+                <h2>Project Overview</h2>
+                <p>Ingestigate is an intelligent food-tracking application that leverages Large Language Models (LLMs) to help users understand and manage their nutrition in a privacy-conscious manner. Currently in private beta, the app represents a complete end-to-end solution built from concept to deployment.</p>
+                
+                <h3>Key Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🤖 LLM-Powered Analysis</h4>
+                        <p>Natural language processing for food logging and nutritional insights</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔒 Privacy-First Design</h4>
+                        <p>User data protection with secure, privacy-aware architecture</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 Custom Database</h4>
+                        <p>Optimized SQL database design for efficient food data management</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📱 User-Friendly Interface</h4>
+                        <p>Intuitive design focused on simplicity and accessibility</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Technical Implementation</h2>
+                
+                <h3>Technology Stack</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">LLM Integration</span>
+                    <span class="tech-badge">Dart/Flutter</span>
+                    <span class="tech-badge">Database Design</span>
+                    <span class="tech-badge">API Development</span>
+                </div>
+
+                <h3>Architecture Highlights</h3>
+                <ul>
+                    <li><strong>Backend:</strong> Custom-built Python backend with efficient SQL database schema for food data management</li>
+                    <li><strong>LLM Integration:</strong> Seamless integration of language models for natural food logging and nutritional analysis</li>
+                    <li><strong>Data Pipeline:</strong> Robust ETL processes for food database construction and maintenance</li>
+                    <li><strong>Security:</strong> Implementation of privacy-first principles with secure data handling</li>
+                    <li><strong>Mobile App:</strong> Cross-platform mobile application built with Flutter/Dart</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>Development Journey</h2>
+                <p>As the sole developer, I handled all aspects of the project:</p>
+                
+                <ul>
+                    <li><strong>Product Design:</strong> Conceptualized the app's core features and user experience flow</li>
+                    <li><strong>Database Architecture:</strong> Designed and implemented a custom SQL database optimized for food intelligence</li>
+                    <li><strong>Backend Development:</strong> Built scalable APIs and integrated LLM capabilities</li>
+                    <li><strong>Frontend Development:</strong> Created an intuitive, user-friendly mobile interface</li>
+                    <li><strong>Testing & Iteration:</strong> Conducted extensive testing to ensure reliability and user satisfaction</li>
+                </ul>
+
+                <h3>Key Learnings</h3>
+                <p>This project significantly expanded my skill set in:</p>
+                <ul>
+                    <li>Building production-ready applications with LLM integration</li>
+                    <li>Designing privacy-conscious data architectures</li>
+                    <li>Full-stack mobile development</li>
+                    <li>User experience design for health-focused applications</li>
+                    <li>Managing end-to-end product development independently</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>Current Status & Future Plans</h2>
+                <p><strong>Status:</strong> Private Beta (2025–present)</p>
+                
+                <h3>Upcoming Features</h3>
+                <ul>
+                    <li>Enhanced nutritional insights and recommendations</li>
+                    <li>Meal planning assistance</li>
+                    <li>Integration with health tracking platforms</li>
+                    <li>Expanded food database with regional cuisines</li>
+                    <li>Community features for recipe sharing</li>
+                </ul>
+
+                <div class="screenshot-placeholder">
+                    <p>📱 App Screenshots Coming Soon</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">The app is currently in private beta. Screenshots and demo will be available upon public release.</p>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Impact & Vision</h2>
+                <p>Ingestigate aims to democratize nutritional intelligence by making it accessible, private, and user-friendly. The app helps users make informed dietary choices without compromising their data privacy—a critical consideration in the health tech space.</p>
+                
+                <p>By leveraging cutting-edge LLM technology, the app removes the friction traditionally associated with food tracking while providing meaningful insights that empower users to take control of their nutrition.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html#projects" class="btn btn-primary">← Back to Projects</a>
+                <a href="index.html#contact" class="btn btn-secondary" style="margin-left: 1rem;">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Xiamei Klancnik. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

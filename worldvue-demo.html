@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldVue AI Demo - Xiamei Klancnik</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .demo-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        .demo-content {
+            padding: 4rem 0;
+        }
+
+        .demo-section {
+            background-color: var(--card-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        .demo-section h2 {
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .demo-section h3 {
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .demo-section p, .demo-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .demo-section ul {
+            margin-left: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background-color: rgba(16, 185, 129, 0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--accent-primary);
+        }
+
+        .feature-card h4 {
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-tertiary);
+            font-size: 0.95rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background-color: var(--bg-tertiary);
+            color: var(--accent-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--accent-primary);
+        }
+
+        .screenshot-placeholder {
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+            border: 2px dashed var(--border-color);
+            border-radius: 12px;
+            padding: 4rem;
+            text-align: center;
+            color: var(--text-tertiary);
+            margin: 2rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-secondary);
+            transform: translateX(-5px);
+        }
+
+        .highlight-box {
+            background-color: rgba(16, 185, 129, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-primary);
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .use-case {
+            background-color: var(--bg-tertiary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .use-case h4 {
+            color: var(--accent-primary);
+            margin-bottom: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Xiamei Klancnik</div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="demo-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+            <h1 class="hero-title" style="font-size: 3rem;">WorldVue AI</h1>
+            <p class="hero-description">Global News Frame Analysis & Bias Detection</p>
+        </div>
+    </section>
+
+    <section class="demo-content">
+        <div class="container">
+            <div class="demo-section">
+                <h2>Project Overview</h2>
+                <p>WorldVue AI is a sophisticated web application that enables users to compare how different countries report on the same news events. By leveraging transformers and large language models, the platform analyzes news framing, bias, and narrative differences across global media sources.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Core Innovation:</strong> The platform goes beyond simple sentiment analysis to understand the nuanced ways different countries frame and present news stories, revealing cultural and political perspectives in media coverage.</p>
+                </div>
+
+                <h3>Key Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🌍 Global Coverage</h4>
+                        <p>Analysis of news sources from multiple countries and languages</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🤖 Advanced NLP</h4>
+                        <p>Transformer models and LLMs for deep semantic analysis</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 Bias Detection</h4>
+                        <p>Identification of framing patterns and editorial bias</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>⚖️ Comparative Analysis</h4>
+                        <p>Side-by-side comparison of how different countries report the same story</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📈 Visualization</h4>
+                        <p>Interactive dashboards showing narrative differences and patterns</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔄 Real-Time Updates</h4>
+                        <p>Continuous monitoring and analysis of breaking news</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Technical Implementation</h2>
+                
+                <h3>Technology Stack</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Transformers</span>
+                    <span class="tech-badge">LLMs</span>
+                    <span class="tech-badge">NLP</span>
+                    <span class="tech-badge">Web Scraping</span>
+                    <span class="tech-badge">Data Pipeline</span>
+                    <span class="tech-badge">React/Web</span>
+                    <span class="tech-badge">SQL</span>
+                </div>
+
+                <h3>Architecture Overview</h3>
+                <ul>
+                    <li><strong>Data Collection:</strong> Large-scale automated collection of news articles from international sources</li>
+                    <li><strong>Text Processing:</strong> Advanced NLP pipeline for multilingual text analysis and translation</li>
+                    <li><strong>Model Layer:</strong> Transformer-based models for semantic understanding and bias detection</li>
+                    <li><strong>LLM Integration:</strong> Large language models for nuanced frame analysis and comparison</li>
+                    <li><strong>Database:</strong> Efficient storage and retrieval system for articles and analysis results</li>
+                    <li><strong>Frontend:</strong> Interactive web interface for exploring and comparing news frames</li>
+                </ul>
+
+                <h3>ML Pipeline</h3>
+                <p>The machine learning pipeline involves several sophisticated steps:</p>
+                <ul>
+                    <li>Entity recognition and topic extraction across multiple languages</li>
+                    <li>Semantic similarity analysis to match equivalent stories across countries</li>
+                    <li>Frame analysis using fine-tuned transformer models</li>
+                    <li>Bias scoring based on language patterns, source selection, and narrative structure</li>
+                    <li>Comparative metrics generation for cross-country analysis</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>Use Cases & Applications</h2>
+                
+                <div class="use-case-grid">
+                    <div class="use-case">
+                        <h4>📰 Media Literacy</h4>
+                        <p>Help readers understand how the same story is told differently across countries and identify potential bias in reporting.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>🎓 Research & Academia</h4>
+                        <p>Provide researchers with tools to study global media narratives and information ecosystems.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>🏢 Business Intelligence</h4>
+                        <p>Help organizations understand how they're covered in different markets and regions.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>🌐 Policy Analysis</h4>
+                        <p>Assist policymakers in understanding international perspectives on global events.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>📊 Journalism</h4>
+                        <p>Support journalists in identifying angles and gaps in their coverage compared to international sources.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>🔍 Fact-Checking</h4>
+                        <p>Aid fact-checkers by highlighting narrative inconsistencies across sources.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Development Journey</h2>
+                <p>WorldVue AI represents a complete product development cycle, from initial concept to working application:</p>
+                
+                <h3>Key Development Phases</h3>
+                <ul>
+                    <li><strong>Conceptualization:</strong> Identified the need for transparent, comparative news analysis</li>
+                    <li><strong>Architecture Design:</strong> Planned scalable system for handling large volumes of multilingual text data</li>
+                    <li><strong>Data Infrastructure:</strong> Built robust pipelines for collecting and processing news from diverse sources</li>
+                    <li><strong>Model Development:</strong> Trained and fine-tuned NLP models for frame analysis and bias detection</li>
+                    <li><strong>UX Design:</strong> Created intuitive interface for exploring complex comparative data</li>
+                    <li><strong>Integration:</strong> Connected all components into a cohesive, performant web application</li>
+                </ul>
+
+                <h3>Technical Challenges & Solutions</h3>
+                <ul>
+                    <li><strong>Challenge:</strong> Processing news articles in multiple languages
+                        <br><strong>Solution:</strong> Implemented multilingual transformer models with efficient translation pipelines</li>
+                    <li><strong>Challenge:</strong> Matching equivalent stories across different sources
+                        <br><strong>Solution:</strong> Developed semantic similarity algorithms with clustering techniques</li>
+                    <li><strong>Challenge:</strong> Detecting subtle framing differences
+                        <br><strong>Solution:</strong> Fine-tuned LLMs on annotated news corpus with frame labels</li>
+                    <li><strong>Challenge:</strong> Handling large-scale data efficiently
+                        <br><strong>Solution:</strong> Optimized data organization and implemented caching strategies</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>Impact & Vision</h2>
+                <p>In an era of information overload and concerns about media bias, WorldVue AI provides a critical tool for understanding how news narratives differ across borders. The platform promotes media literacy and helps users develop a more nuanced understanding of global events.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Vision:</strong> To become the go-to platform for anyone seeking to understand the full picture of global news events by exposing how different countries frame and report the same stories.</p>
+                </div>
+
+                <h3>Future Enhancements</h3>
+                <ul>
+                    <li>Expansion to more countries and news sources</li>
+                    <li>Historical analysis showing how coverage evolves over time</li>
+                    <li>API access for researchers and developers</li>
+                    <li>Browser extension for real-time bias analysis while reading news</li>
+                    <li>Community features for crowdsourced frame identification</li>
+                    <li>Integration with fact-checking databases</li>
+                </ul>
+
+                <div class="screenshot-placeholder">
+                    <p>🌍 Platform Screenshots & Demo</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Interactive demo and detailed screenshots coming soon</p>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Technical Highlights</h2>
+                <p>WorldVue AI showcases advanced capabilities in:</p>
+                <ul>
+                    <li>Large-scale data collection and ETL processes</li>
+                    <li>Multilingual NLP and text analysis</li>
+                    <li>State-of-the-art transformer architectures</li>
+                    <li>LLM integration for sophisticated analysis</li>
+                    <li>Full-stack web development</li>
+                    <li>Data visualization and UX design</li>
+                    <li>Scalable system architecture</li>
+                </ul>
+
+                <p style="margin-top: 2rem;">This project demonstrates the ability to take a complex idea from conception through to a functional product, handling every aspect from ML model development to user interface design.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html#projects" class="btn btn-primary">← Back to Projects</a>
+                <a href="index.html#contact" class="btn btn-secondary" style="margin-left: 1rem;">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Xiamei Klancnik. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
