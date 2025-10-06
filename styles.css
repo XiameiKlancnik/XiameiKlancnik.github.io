@@ -214,7 +214,41 @@ section {
     color: var(--accent-primary);
 }
 
-.focus-tags, .tech-tags {
+.focus-chart {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pie-chart {
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+}
+
+.focus-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.tech-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
@@ -286,9 +320,9 @@ section {
 }
 
 .skill-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
 }
 
 .skill-item {
