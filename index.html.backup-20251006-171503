@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xiamei Klancnik - Data Scientist / ML Engineer</title>
-    <meta name="description" content="I build practical ML systems—LLMs, transformers, and clean data pipelines—for products that ship.">
-    <link rel="stylesheet" href="theme-tokens.css">
-    <link rel="stylesheet" href="base-polish.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="theme-bg.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme-tokens.css">
+    <link rel="stylesheet" href="theme-bg.css">
 </head>
 <body>
-    <nav class="navbar" aria-label="Primary Navigation">
+    <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">Xiamei Klancnik</div>
             <ul class="nav-menu">
@@ -30,20 +28,15 @@
     <section id="home" class="hero hero-bg">
         <div class="container">
             <div class="hero-grid">
-                <img src="profile_pic.png" alt="Xiamei Klancnik profile photo" class="hero-profile-picture">
+                <img src="profile_pic.png" alt="Xiamei Klancnik" class="hero-profile-picture">
                 <div class="hero-content">
-                    <h1 class="hero-title">Data Scientist / ML Engineer</h1>
-                    <p class="hero-description">I build practical ML systems—LLMs, transformers, and clean data pipelines—for products that ship.</p>
-                    <div class="hero-tags">
-                        <span class="tag tag--accent">Transformers</span>
-                        <span class="tag tag--accent">Time-series</span>
-                        <span class="tag tag--accent">MLOps</span>
-                        <span class="tag tag--accent">FastAPI</span>
-                        <span class="tag tag--accent">PyTorch</span>
-                    </div>
+                    <h1 class="hero-title">Xiamei Klancnik</h1>
+                    <h2 class="hero-subtitle">Data Scientist / ML Engineer</h2>
+                    <p class="hero-description">Building impactful products with transformers, LLMs & creativity 🚀</p>
+                    <p class="hero-description" style="font-size: 1rem; margin-top: -1rem;">MSc Data Science (cum laude) | BSc Mathematics | R&D Data Scientist in Energy</p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn--primary">View Projects</a>
-                        <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                     </div>
                 </div>
             </div>
@@ -52,28 +45,37 @@
 
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <h3>What Drives Me</h3>
-                    <ul class="skills-list">
-                        <li><strong>Interdisciplinary impact:</strong> Applied ML across healthcare, energy, finance, astronomy, nutrition, and policy—bridging chemistry, physics, mathematics, and CS.</li>
-                        <li><strong>Fast-paced, high-ambition environments:</strong> Thrive on novel, society-driven challenges and thinking big.</li>
-                        <li><strong>Product builder:</strong> From idea to deployment. Currently training transformers and researching LLMs for unbiased data labeling.</li>
-                        <li><strong>Independent + collaborative:</strong> Work autonomously but love small, focused teams. Run many parallel experiments; each teaches something valuable.</li>
-                    </ul>
+                    <p>What I love most about data science? <strong>It can advance ANY topic.</strong> With a background spanning chemistry, physics, mathematics, and informatics, I've applied ML to everything from colorectal cancer and nutrition to astronomy, finance, and societal challenges. The interdisciplinary nature of this field is what drives me.</p>
+                    
+                    <p>I get most energized in fast-paced, ambitious environments tackling novel, society-driven problems. I thrive on <strong>thinking big</strong> and coming up with creative solutions that make real impact. Currently, I'm deep into training transformers and researching how to use LLMs in data labeling while avoiding bias!</p>
 
+                    <p>While I work independently, I love collaborating in small, focused teams. I'm not afraid of challenge; I aim high and embrace it! Fun fact: I have many parallel projects going at once. Even if I don't finish them all, they teach me something valuable, and that's what matters.</p>
+
+                    <h3>Beyond Data Science</h3>
+                    <p>When I'm not training models, you'll find me: cooking or baking (food science meets creativity!), at the gym, diving into a good book, 3D printing and modeling, painting, or blasting metal music 🤘. I'm also a product builder at heart: I love taking ideas from concept to reality.</p>
+                    
                     <h3>Interdisciplinary Focus</h3>
                     <div class="focus-tags">
+                        <span class="tag">Data Science</span>
                         <span class="tag">Health</span>
+                        <span class="tag">Society</span>
+                        <span class="tag">Law & Policy</span>
                         <span class="tag">Energy</span>
                         <span class="tag">Finance</span>
-                        <span class="tag">Society & Policy</span>
                         <span class="tag">Astronomy</span>
-                        <span class="tag">Nutrition</span>
                     </div>
 
-                    <p class="micro-text" style="margin-top: 2rem; color: var(--muted); font-size: 0.9rem;"><em>Beyond work:</em> Baking, metal music, 3D printing, powerlifting, painting. MSc Data Science (cum laude), BSc Mathematics.</p>
+                    <h3>What Drives Me</h3>
+                    <ul class="skills-list">
+                        <li>Creative problem-solving & thinking big</li>
+                        <li>Fast-paced, ambitious environments</li>
+                        <li>Building products with real impact</li>
+                        <li>Independent but collaborative</li>
+                        <li>Always learning, always exploring</li>
+                    </ul>
                 </div>
 
                 <div class="expertise-box">
@@ -129,76 +131,50 @@
         <div class="container">
             <h2 class="section-title">Projects & Research</h2>
             <div class="projects-grid">
-
-                <article class="project-card card featured">
+                
+                <div class="project-card featured">
                     <div class="project-header">
                         <h3>INNAX Energy Hubs</h3>
                         <span class="project-date">2024–present</span>
                     </div>
-                    <p><strong>Adopted by Province of Utrecht for prioritizing energy hub scenarios and grid congestion measures.</strong> End-to-end tooling: ETL pipelines, time-series forecasting, and policy dashboards translating hotspots into actionable insights.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Forecasting</span>
-                        <span class="tag">ETL</span>
-                        <span class="tag">Dashboards</span>
-                    </div>
-                </article>
+                    <p>Independently developed end-to-end tooling for grid congestion analysis, from ETL to forecasting and dashboards. Translated hotspots and solution scenarios into insights directly usable for policy and decision-making.</p>
+                    <p class="project-impact"><strong>Impact:</strong> Results used by Province of Utrecht for prioritizing energy hub scenarios and grid congestion measures.</p>
+                </div>
 
-                <article class="project-card card featured">
+                <div class="project-card featured">
                     <div class="project-header">
                         <h3>Ingestigate</h3>
                         <span class="project-date">2025–present</span>
                     </div>
-                    <p><strong>Private beta LLM-driven food intelligence app.</strong> Full-stack development: custom SQL database, privacy-first architecture, and user-friendly interface for personalized nutrition insights.</p>
-                    <div class="tech-tags">
-                        <span class="tag">LLMs</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">Privacy</span>
-                        <span class="tag">Flutter</span>
-                    </div>
+                    <p>Independently developed an LLM-driven food-intelligence app (private beta) including custom database (SQL). Gained experience building systems that are user-friendly and privacy-aware.</p>
                     <a href="ingestigate-demo.html" class="project-link">View Demo →</a>
-                </article>
+                </div>
 
-                <article class="project-card card featured">
+                <div class="project-card featured">
                     <div class="project-header">
                         <h3>WorldVue AI</h3>
                         <span class="project-date">2025–present</span>
                     </div>
-                    <p><strong>Global news frame comparison tool.</strong> Large-scale transformer pipeline analyzing media bias across countries. Full product ownership: architecture, UX, and data organization.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Transformers</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">Web App</span>
-                        <span class="tag">Big Data</span>
-                    </div>
+                    <p>Web app for global comparison of news frames and bias by country, built with large-scale data, transformers, and LLMs. From idea to working product: architecture, UX, and data organization.</p>
                     <a href="worldvue-demo.html" class="project-link">View Demo →</a>
-                </article>
+                </div>
 
-                <article class="project-card card">
+                <div class="project-card">
                     <div class="project-header">
-                        <h3>MSc Thesis</h3>
+                        <h3>MSc DS Thesis</h3>
                         <span class="project-date">2023 • Grade: 8</span>
                     </div>
-                    <p><em>Transforming Electricity Forecasting: The Power of Transfer Learning in Limited Data Scenarios.</em> Transfer learning consistently outperformed classical baselines and from-scratch deep models in limited-data regimes.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Transfer Learning</span>
-                        <span class="tag">LSTM</span>
-                        <span class="tag">Time-series</span>
-                    </div>
-                </article>
+                    <p><em>Transforming Electricity Forecasting: The Power of Transfer Learning in Limited Data Scenarios.</em></p>
+                    <p>Found that transfer learning consistently improved accuracy over classical baselines and from-scratch deep models in limited-data regimes.</p>
+                </div>
 
-                <article class="project-card card">
+                <div class="project-card">
                     <div class="project-header">
-                        <h3>Radboudumc Internship</h3>
+                        <h3>Master's Internship Radboudumc</h3>
                         <span class="project-date">2023</span>
                     </div>
-                    <p>Metastases prediction models for colorectal cancer. Statistical ML and Monte Carlo simulation to inform clinical decision-making.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Healthcare ML</span>
-                        <span class="tag">Monte Carlo</span>
-                        <span class="tag">Python</span>
-                    </div>
-                </article>
+                    <p>Prediction models for metastases in colorectal cancer using statistical machine learning and Monte Carlo simulation.</p>
+                </div>
 
             </div>
         </div>
