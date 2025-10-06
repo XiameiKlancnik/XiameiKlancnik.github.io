@@ -3,14 +3,14 @@
    ============================================================ */
 
 :root {
-  /* Burgundy Wine (Active) */
-  --bg: #0A0708;
-  --panel: #120A0E;
-  --text: #F0E8EB;
-  --muted: #C0B0B5;
-  --accent: #8B3A62;
-  --accent-halo: #B8648F;
-  --accent-muted: #5F2A45;
+  /* Deep Wine (Active) - No Pink */
+  --bg: #09060A;
+  --panel: #110A0F;
+  --text: #EDE8E8;
+  --muted: #B8ACA8;
+  --accent: #7A3B4F;
+  --accent-halo: #9D5F6F;
+  --accent-muted: #4A2530;
 }
 
 /* Alternative palettes (uncomment to switch) */
