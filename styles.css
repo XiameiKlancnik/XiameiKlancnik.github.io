@@ -345,6 +345,13 @@ section {
     filter: grayscale(100%) brightness(2);
 }
 
+.drives-skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
 .skills-cloud-inline {
     display: flex;
     flex-wrap: wrap;
