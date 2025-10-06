@@ -98,15 +98,9 @@ body::before {
     display: flex;
     align-items: center;
     padding-top: 80px;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.7);
     position: relative;
     overflow: hidden;
-}
-
-.hero .container {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 3rem;
-    border-radius: 16px;
 }
 
 .hero::before {
