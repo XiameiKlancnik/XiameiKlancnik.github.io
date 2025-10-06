@@ -1,17 +1,76 @@
 /* JD contour background helper */
 .hero-bg{
+  position: relative;
+}
+
+.hero-bg::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background:
     radial-gradient(1200px 800px at 85% 30%, color-mix(in lab, var(--accent) 5%, transparent), transparent 60%),
     url('assets/bg/jd_copper_subtle.svg') right center / 120% auto no-repeat;
   background-color: var(--bg);
   box-shadow: inset 0 -120px 160px rgba(0,0,0,.6);
   opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-bg > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .projects-bg{
+  position: relative;
+}
+
+.projects-bg::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background:
     radial-gradient(1200px 800px at 15% 50%, color-mix(in lab, var(--accent) 4%, transparent), transparent 60%),
     url('assets/bg/jd_copper_subtle.svg') left center / 120% auto no-repeat;
   background-color: transparent;
   opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.projects-bg > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-bg{
+  position: relative;
+}
+
+.contact-bg::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(1200px 800px at 85% 30%, color-mix(in lab, var(--accent) 5%, transparent), transparent 60%),
+    url('assets/bg/jd_copper_subtle.svg') right center / 120% auto no-repeat;
+  background-color: transparent;
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-bg > .container {
+  position: relative;
+  z-index: 1;
 }
