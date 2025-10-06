@@ -214,38 +214,42 @@ section {
     color: var(--accent-primary);
 }
 
-.focus-chart {
+.tag-cloud {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 2rem;
+    padding: 0.5rem 0;
 }
 
-.pie-chart {
-    width: 140px;
-    height: 140px;
-    flex-shrink: 0;
+.cloud-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    color: var(--accent-primary);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    letter-spacing: -0.02em;
+    line-height: 1;
 }
 
-.focus-legend {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.cloud-tag:hover {
+    opacity: 1;
+    transform: scale(1.05);
 }
 
-.legend-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+.cloud-large {
+    font-size: 2rem;
 }
 
-.legend-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    flex-shrink: 0;
+.cloud-medium {
+    font-size: 1.5rem;
+    opacity: 0.75;
+}
+
+.cloud-small {
+    font-size: 1.1rem;
+    opacity: 0.6;
 }
 
 .tech-tags {
