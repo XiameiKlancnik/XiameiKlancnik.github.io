@@ -5,17 +5,17 @@
 }
 
 :root {
-    --bg-primary: #0A0C0F;
+    --bg-primary: var(--bg);
     --bg-secondary: #0a0a0a;
     --bg-tertiary: #121212;
-    --text-primary: #F3EDE7;
-    --text-secondary: #B7B1AA;
+    --text-primary: var(--text);
+    --text-secondary: var(--muted);
     --text-tertiary: #9ca3af;
-    --accent-primary: #D97745;
-    --accent-secondary: #F4A261;
-    --accent-hover: #E38550;
+    --accent-primary: var(--accent);
+    --accent-secondary: var(--accent-halo);
+    --accent-hover: var(--accent-halo);
     --border-color: #1a1a1a;
-    --card-bg: #0f0f0f;
+    --card-bg: var(--panel);
 }
 
 body {
@@ -134,17 +134,18 @@ body::before {
 }
 
 .hero-subtitle {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 1rem;
 }
 
 .hero-description {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     max-width: 68ch;
+    line-height: 1.6;
 }
 
 .hero-tags {
