@@ -1,3 +1,29 @@
+// Typewriter effect for hero subtitle
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.textContent = '';
+    element.style.opacity = '1';
+
+    function type() {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    type();
+}
+
+// Initialize typewriter on page load
+window.addEventListener('load', () => {
+    const subtitle = document.querySelector('.hero-subtitle');
+    if (subtitle) {
+        const text = subtitle.textContent;
+        subtitle.style.opacity = '0';
+        setTimeout(() => typeWriter(subtitle, text, 80), 500);
+    }
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -43,12 +69,31 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all project cards and timeline items
-document.querySelectorAll('.project-card, .timeline-item, .contact-item').forEach(el => {
+// Observe all project cards, timeline items, and sections
+document.querySelectorAll('.project-card, .timeline-item, .contact-item, .about-text, .expertise-box, .section-title').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
+});
+
+// Animated progress bars on scroll for interdisciplinary focus
+const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const fill = entry.target.querySelector('.bar-fill');
+            const targetWidth = fill.style.width;
+            fill.style.width = '0%';
+            setTimeout(() => {
+                fill.style.width = targetWidth;
+            }, 100);
+            barObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.bar-item').forEach(bar => {
+    barObserver.observe(bar);
 });
 
 // Active navigation highlight
