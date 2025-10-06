@@ -1,16 +1,16 @@
 /* ============================================================
-   THEME TOKENS - Deep Forest Green (Active)
+   THEME TOKENS - Deep Crimson (Active)
    ============================================================ */
 
 :root {
-  /* Deep Forest Green (Active) */
-  --bg: #06090A;
-  --panel: #0A110F;
-  --text: #E8F0EB;
-  --muted: #A8B8B0;
-  --accent: #3D6B5A;
-  --accent-halo: #5A9179;
-  --accent-muted: #2A4A3D;
+  /* Deep Crimson (Active) */
+  --bg: #0A0607;
+  --panel: #110A0C;
+  --text: #F0E8E8;
+  --muted: #BDB0B0;
+  --accent: #9B2C2C;
+  --accent-halo: #C44D4D;
+  --accent-muted: #6B1F1F;
 }
 
 /* Alternative palettes (uncomment to switch) */
