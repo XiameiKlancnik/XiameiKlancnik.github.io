@@ -1,16 +1,16 @@
 /* ============================================================
-   THEME TOKENS - Burnt Orange/Terracotta (Active)
+   THEME TOKENS - Deep Forest Green (Active)
    ============================================================ */
 
 :root {
-  /* Burnt Orange/Terracotta (Active) */
-  --bg: #0A0807;
-  --panel: #120F0B;
-  --text: #F0EBE5;
-  --muted: #BDB3A8;
-  --accent: #C7552D;
-  --accent-halo: #E6805C;
-  --accent-muted: #8A3A1F;
+  /* Deep Forest Green (Active) */
+  --bg: #06090A;
+  --panel: #0A110F;
+  --text: #E8F0EB;
+  --muted: #A8B8B0;
+  --accent: #3D6B5A;
+  --accent-halo: #5A9179;
+  --accent-muted: #2A4A3D;
 }
 
 /* Alternative palettes (uncomment to switch) */
