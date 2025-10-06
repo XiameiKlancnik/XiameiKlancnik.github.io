@@ -9,16 +9,16 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Lora', Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* Heading hierarchy */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Archivo Black', sans-serif;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+  text-transform: none;
 }
 
 h1 {

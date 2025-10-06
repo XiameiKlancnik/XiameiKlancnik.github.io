@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Lora', Georgia, serif;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
@@ -66,12 +66,12 @@ body::before {
 }
 
 .nav-brand {
-    font-family: 'Archivo Black', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 700;
     color: var(--accent-primary);
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    text-transform: none;
 }
 
 .nav-menu {
