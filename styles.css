@@ -285,6 +285,28 @@ section {
     line-height: 1.5;
 }
 
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-name {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.skill-rating {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
 /* Projects Section */
 .projects-grid {
     display: grid;
