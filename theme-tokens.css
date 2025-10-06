@@ -3,14 +3,14 @@
    ============================================================ */
 
 :root {
-  /* Amethyst (Active) */
+  /* Amethyst (Active) - Muted */
   --bg: #07070C;
   --panel: #0C0A12;
-  --text: #EEEAFB;
-  --muted: #B7B0C8;
-  --accent: #7C3AED;
-  --accent-halo: #A78BFA;
-  --accent-muted: #3A1A6F;
+  --text: #E8E4F0;
+  --muted: #B0A8C0;
+  --accent: #6B5B95;
+  --accent-halo: #8B7FA8;
+  --accent-muted: #3A2F5F;
 }
 
 /* Alternative palettes (uncomment to switch) */
