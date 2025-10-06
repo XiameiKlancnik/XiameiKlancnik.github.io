@@ -1,29 +1,3 @@
-// Typewriter effect for hero subtitle
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.textContent = '';
-    element.style.opacity = '1';
-
-    function type() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    type();
-}
-
-// Initialize typewriter on page load
-window.addEventListener('load', () => {
-    const subtitle = document.querySelector('.hero-subtitle');
-    if (subtitle) {
-        const text = subtitle.textContent;
-        subtitle.style.opacity = '0';
-        setTimeout(() => typeWriter(subtitle, text, 80), 500);
-    }
-});
-
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
