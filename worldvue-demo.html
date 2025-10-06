@@ -173,74 +173,82 @@
         <div class="container">
             <div class="demo-section">
                 <h2>Project Overview</h2>
-                <p>WorldVue AI is a sophisticated web application that enables users to compare how different countries report on the same news events. By leveraging transformers and large language models, the platform analyzes news framing, bias, and narrative differences across global media sources.</p>
-                
+                <p>WorldVue is a political bias detection system that analyzes how different countries and media sources frame news stories. Using CORE24 (12-dimension political bias detection) and Entity Framing analysis, the platform reveals ideological positioning across economic and social/authority dimensions.</p>
+
                 <div class="highlight-box">
-                    <p><strong>Core Innovation:</strong> The platform goes beyond simple sentiment analysis to understand the nuanced ways different countries frame and present news stories, revealing cultural and political perspectives in media coverage.</p>
+                    <p><strong>Core Innovation:</strong> CORE24 framework provides multidimensional political bias analysis across 12 dimensions organized into 4 quadrants (Economic Left/Right, Social Libertarian/Authoritarian), going far beyond simple left-right spectrum analysis.</p>
                 </div>
 
-                <h3>Key Features</h3>
+                <h3>Core Systems</h3>
                 <div class="feature-grid">
                     <div class="feature-card">
-                        <h4>Global Coverage</h4>
-                        <p>Analysis of news sources from multiple countries and languages</p>
+                        <h4>CORE24 Bias Detection</h4>
+                        <p>12-dimension political bias analysis across economic (pro_market, pro_worker, elite_status) and social/authority (democratic_norms, inclusive, social_values) axes</p>
                     </div>
                     <div class="feature-card">
-                        <h4>Advanced NLP</h4>
-                        <p>Transformer models and LLMs for deep semantic analysis</p>
+                        <h4>Entity Framing Analysis</h4>
+                        <p>12-dimension analysis of how entities (politicians, organizations) are portrayed across economic, social, and meta dimensions</p>
                     </div>
                     <div class="feature-card">
-                        <h4>Bias Detection</h4>
-                        <p>Identification of framing patterns and editorial bias</p>
+                        <h4>Interactive World Map</h4>
+                        <p>GeoJSON-based visualization showing country-level bias patterns with real-time filtering by topic and entity</p>
                     </div>
                     <div class="feature-card">
-                        <h4>Comparative Analysis</h4>
-                        <p>Side-by-side comparison of how different countries report the same story</p>
+                        <h4>Multilingual Search</h4>
+                        <p>XLM-RoBERTa powered search across articles from multiple countries and languages</p>
                     </div>
                     <div class="feature-card">
-                        <h4>Visualization</h4>
-                        <p>Interactive dashboards showing narrative differences and patterns</p>
+                        <h4>RESTful API</h4>
+                        <p>Flask backend with endpoints for topic filtering, entity analysis, and bias detection</p>
                     </div>
                     <div class="feature-card">
-                        <h4>Real-Time Updates</h4>
-                        <p>Continuous monitoring and analysis of breaking news</p>
+                        <h4>Real-Time Analytics</h4>
+                        <p>Trending topics detection and time-windowed analysis with caching for performance</p>
                     </div>
                 </div>
             </div>
 
             <div class="demo-section">
                 <h2>Technical Implementation</h2>
-                
+
                 <h3>Technology Stack</h3>
                 <div class="tech-stack">
                     <span class="tech-badge">Python</span>
-                    <span class="tech-badge">Transformers</span>
-                    <span class="tech-badge">LLMs</span>
-                    <span class="tech-badge">NLP</span>
-                    <span class="tech-badge">Web Scraping</span>
-                    <span class="tech-badge">Data Pipeline</span>
-                    <span class="tech-badge">React/Web</span>
-                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">XLM-RoBERTa</span>
+                    <span class="tech-badge">OpenAI API</span>
+                    <span class="tech-badge">Supabase</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">GeoJSON</span>
+                    <span class="tech-badge">PyTorch</span>
                 </div>
+
+                <h3>CORE24 Framework</h3>
+                <p>The CORE24 system analyzes political bias across 12 dimensions organized into 4 ideological quadrants:</p>
+                <ul>
+                    <li><strong>Economic Left:</strong> pro_market (negative), pro_worker (positive), elite_status (negative)</li>
+                    <li><strong>Economic Right:</strong> pro_market (positive), pro_worker (negative), elite_status (positive)</li>
+                    <li><strong>Social Libertarian:</strong> democratic_norms, inclusive, social_values (progressive)</li>
+                    <li><strong>Social Authoritarian:</strong> democratic_norms (weak), inclusive (low), social_values (traditional)</li>
+                </ul>
+
+                <h3>Entity Framing System</h3>
+                <p>XLM-RoBERTa based multi-label classifier analyzing entity portrayal across 12 dimensions:</p>
+                <ul>
+                    <li><strong>Economic Dimensions:</strong> pro_market, pro_worker, elite_status, economic_competence</li>
+                    <li><strong>Social/Authority Dimensions:</strong> democratic_norms, inclusive, social_values, moral_character</li>
+                    <li><strong>Meta Dimensions:</strong> competence, victim_aggressor, insider_outsider, threat_defender</li>
+                    <li><strong>Output:</strong> POSITIVE/NEGATIVE/NEUTRAL predictions with confidence scores, net score, and aggregate metrics</li>
+                </ul>
 
                 <h3>Architecture Overview</h3>
                 <ul>
-                    <li><strong>Data Collection:</strong> Large-scale automated collection of news articles from international sources</li>
-                    <li><strong>Text Processing:</strong> Advanced NLP pipeline for multilingual text analysis and translation</li>
-                    <li><strong>Model Layer:</strong> Transformer-based models for semantic understanding and bias detection</li>
-                    <li><strong>LLM Integration:</strong> Large language models for nuanced frame analysis and comparison</li>
-                    <li><strong>Database:</strong> Efficient storage and retrieval system for articles and analysis results</li>
-                    <li><strong>Frontend:</strong> Interactive web interface for exploring and comparing news frames</li>
-                </ul>
-
-                <h3>ML Pipeline</h3>
-                <p>The machine learning pipeline involves several sophisticated steps:</p>
-                <ul>
-                    <li>Entity recognition and topic extraction across multiple languages</li>
-                    <li>Semantic similarity analysis to match equivalent stories across countries</li>
-                    <li>Frame analysis using fine-tuned transformer models</li>
-                    <li>Bias scoring based on language patterns, source selection, and narrative structure</li>
-                    <li>Comparative metrics generation for cross-country analysis</li>
+                    <li><strong>Backend:</strong> Flask server with RESTful API (topic filtering, entity analysis, multilingual search)</li>
+                    <li><strong>Database:</strong> Supabase PostgreSQL with entity_framing table, RLS policies, and optimized indexes</li>
+                    <li><strong>CORE24 Judge:</strong> LLM-based bias detection using OpenAI API with rate limiting and cost control</li>
+                    <li><strong>Entity Framing Predictor:</strong> Fine-tuned XLM-RoBERTa model for 12-dimension classification</li>
+                    <li><strong>CLI System:</strong> Command-line tools for batch judging and entity framing analysis</li>
+                    <li><strong>Frontend:</strong> Interactive world map with GeoJSON visualization, topic/entity filtering, and article cards</li>
                 </ul>
             </div>
 
@@ -277,69 +285,71 @@
 
             <div class="demo-section">
                 <h2>Development Journey</h2>
-                <p>WorldVue AI represents a complete product development cycle, from initial concept to working application:</p>
-                
+                <p>WorldVue represents end-to-end system design and implementation, from theoretical framework to production deployment:</p>
+
                 <h3>Key Development Phases</h3>
                 <ul>
-                    <li><strong>Conceptualization:</strong> Identified the need for transparent, comparative news analysis</li>
-                    <li><strong>Architecture Design:</strong> Planned scalable system for handling large volumes of multilingual text data</li>
-                    <li><strong>Data Infrastructure:</strong> Built robust pipelines for collecting and processing news from diverse sources</li>
-                    <li><strong>Model Development:</strong> Trained and fine-tuned NLP models for frame analysis and bias detection</li>
-                    <li><strong>UX Design:</strong> Created intuitive interface for exploring complex comparative data</li>
-                    <li><strong>Integration:</strong> Connected all components into a cohesive, performant web application</li>
+                    <li><strong>Framework Design:</strong> Developed CORE24 12-dimension political bias framework with balanced signal bank</li>
+                    <li><strong>Model Training:</strong> Fine-tuned XLM-RoBERTa for 12-dimension entity framing classification (multilingual)</li>
+                    <li><strong>Backend Architecture:</strong> Built Flask RESTful API with Supabase PostgreSQL integration</li>
+                    <li><strong>Database Schema:</strong> Designed entity_framing table with RLS policies and optimized indexes</li>
+                    <li><strong>CLI System:</strong> Created command-line tools for batch processing and analysis workflows</li>
+                    <li><strong>Frontend Visualization:</strong> Implemented interactive world map with GeoJSON country-level bias visualization</li>
+                    <li><strong>Production Deployment:</strong> Clean production system with caching, rate limiting, and cost control</li>
                 </ul>
 
                 <h3>Technical Challenges & Solutions</h3>
                 <ul>
-                    <li><strong>Challenge:</strong> Processing news articles in multiple languages
-                        <br><strong>Solution:</strong> Implemented multilingual transformer models with efficient translation pipelines</li>
-                    <li><strong>Challenge:</strong> Matching equivalent stories across different sources
-                        <br><strong>Solution:</strong> Developed semantic similarity algorithms with clustering techniques</li>
-                    <li><strong>Challenge:</strong> Detecting subtle framing differences
-                        <br><strong>Solution:</strong> Fine-tuned LLMs on annotated news corpus with frame labels</li>
-                    <li><strong>Challenge:</strong> Handling large-scale data efficiently
-                        <br><strong>Solution:</strong> Optimized data organization and implemented caching strategies</li>
+                    <li><strong>Challenge:</strong> Multidimensional bias beyond simple left-right spectrum
+                        <br><strong>Solution:</strong> CORE24 framework with 4 quadrants (Economic Left/Right, Social Libertarian/Authoritarian)</li>
+                    <li><strong>Challenge:</strong> Entity framing across multiple ideological dimensions
+                        <br><strong>Solution:</strong> Fine-tuned XLM-RoBERTa for 12-dimension multi-label classification with confidence scores</li>
+                    <li><strong>Challenge:</strong> LLM API costs for large-scale bias detection
+                        <br><strong>Solution:</strong> Parallel processing with rate limiting, budget tracking, and caching strategies</li>
+                    <li><strong>Challenge:</strong> Real-time visualization of complex bias patterns
+                        <br><strong>Solution:</strong> GeoJSON world map with time-windowed queries and optimized database indexes</li>
                 </ul>
             </div>
 
             <div class="demo-section">
-                <h2>Impact & Vision</h2>
-                <p>In an era of information overload and concerns about media bias, WorldVue AI provides a critical tool for understanding how news narratives differ across borders. The platform promotes media literacy and helps users develop a more nuanced understanding of global events.</p>
+                <h2>System Capabilities</h2>
 
-                <div class="highlight-box">
-                    <p><strong>Vision:</strong> To become the go-to platform for anyone seeking to understand the full picture of global news events by exposing how different countries frame and report the same stories.</p>
-                </div>
-
-                <h3>Future Enhancements</h3>
+                <h3>API Endpoints</h3>
                 <ul>
-                    <li>Expansion to more countries and news sources</li>
-                    <li>Historical analysis showing how coverage evolves over time</li>
-                    <li>API access for researchers and developers</li>
-                    <li>Browser extension for real-time bias analysis while reading news</li>
-                    <li>Community features for crowdsourced frame identification</li>
-                    <li>Integration with fact-checking databases</li>
+                    <li><strong>GET /api/topic/&lt;topic&gt;:</strong> Retrieve articles filtered by topic with bias scores</li>
+                    <li><strong>GET /api/country/&lt;country&gt;:</strong> Get country-specific articles and aggregate bias metrics</li>
+                    <li><strong>GET /api/trending:</strong> Discover trending topics globally with article counts</li>
+                    <li><strong>POST /api/entity-framing/analyze:</strong> Analyze entity framing for specific article/entity pairs</li>
+                    <li><strong>GET /api/entity-framing/&lt;entity&gt;:</strong> Retrieve all framing results for a given entity</li>
+                    <li><strong>GET /api/search:</strong> Multilingual article search with XLM-RoBERTa embeddings</li>
                 </ul>
 
-                <div class="screenshot-placeholder">
-                    <p>Platform Screenshots & Demo</p>
-                    <p style="font-size: 0.9rem; margin-top: 1rem;">Interactive demo and detailed screenshots coming soon</p>
+                <h3>CLI Commands</h3>
+                <ul>
+                    <li><strong>worldvue judge:</strong> Batch CORE24 bias detection with parallel processing and rate limiting</li>
+                    <li><strong>worldvue entity-framing analyze:</strong> Entity framing analysis for articles with entity extraction</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>Production Features:</strong> Caching layer (15-min TTL), time-windowed queries (7-day default), cost control system, RLS security policies, optimized database indexes, and parallel processing with worker pools.</p>
                 </div>
             </div>
 
             <div class="demo-section">
                 <h2>Technical Highlights</h2>
-                <p>WorldVue AI showcases advanced capabilities in:</p>
+                <p>WorldVue showcases advanced capabilities in:</p>
                 <ul>
-                    <li>Large-scale data collection and ETL processes</li>
-                    <li>Multilingual NLP and text analysis</li>
-                    <li>State-of-the-art transformer architectures</li>
-                    <li>LLM integration for sophisticated analysis</li>
-                    <li>Full-stack web development</li>
-                    <li>Data visualization and UX design</li>
-                    <li>Scalable system architecture</li>
+                    <li><strong>Political Science Framework:</strong> CORE24 multidimensional bias model with theoretical grounding</li>
+                    <li><strong>Transformer Fine-tuning:</strong> XLM-RoBERTa multi-label classification for 12 framing dimensions</li>
+                    <li><strong>LLM Integration:</strong> OpenAI API usage with parallel processing, budget tracking, and rate limiting</li>
+                    <li><strong>Database Design:</strong> PostgreSQL schema with RLS policies, indexes, and unique constraints</li>
+                    <li><strong>RESTful API Architecture:</strong> Flask backend with caching, error handling, and time-windowed queries</li>
+                    <li><strong>GeoJSON Visualization:</strong> Interactive world map with real-time filtering and bias overlays</li>
+                    <li><strong>CLI System Design:</strong> Modular command structure for batch processing workflows</li>
+                    <li><strong>Production Deployment:</strong> Environment configuration, security policies, and performance optimization</li>
                 </ul>
 
-                <p style="margin-top: 2rem;">This project demonstrates the ability to take a complex idea from conception through to a functional product, handling every aspect from ML model development to user interface design.</p>
+                <p style="margin-top: 2rem;">This project demonstrates end-to-end system development from theoretical framework design through model training, backend architecture, database schema, API implementation, and production deployment.</p>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
