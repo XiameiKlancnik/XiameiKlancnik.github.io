@@ -66,12 +66,12 @@ body::before {
 }
 
 .nav-brand {
-    font-family: 'Manrope', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
     color: var(--accent-primary);
-    letter-spacing: -0.02em;
-    text-transform: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .nav-menu {
