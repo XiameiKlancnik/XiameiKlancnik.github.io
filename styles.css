@@ -342,6 +342,45 @@ section {
 .skill-rating {
     font-size: 0.85rem;
     opacity: 0.9;
+    filter: grayscale(100%) brightness(2);
+}
+
+.soft-skills {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    text-align: center;
+}
+
+.soft-skills h3 {
+    color: var(--accent-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.skills-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-cloud-item {
+    background: linear-gradient(135deg, var(--panel) 0%, color-mix(in lab, var(--panel) 95%, var(--accent-primary) 5%) 100%);
+    border: 1px solid color-mix(in lab, var(--accent-primary) 20%, transparent);
+    color: var(--text-primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill-cloud-item:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in lab, var(--accent-primary) 40%, transparent);
+    box-shadow: 0 4px 16px color-mix(in lab, var(--accent-primary) 15%, rgba(0, 0, 0, 0.3));
 }
 
 /* Projects Section */
