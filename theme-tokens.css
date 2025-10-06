@@ -1,16 +1,16 @@
 /* ============================================================
-   THEME TOKENS - Amethyst (Active)
+   THEME TOKENS - Burgundy Wine (Active)
    ============================================================ */
 
 :root {
-  /* Amethyst (Active) - Muted */
-  --bg: #07070C;
-  --panel: #0C0A12;
-  --text: #E8E4F0;
-  --muted: #B0A8C0;
-  --accent: #6B5B95;
-  --accent-halo: #8B7FA8;
-  --accent-muted: #3A2F5F;
+  /* Burgundy Wine (Active) */
+  --bg: #0A0708;
+  --panel: #120A0E;
+  --text: #F0E8EB;
+  --muted: #C0B0B5;
+  --accent: #8B3A62;
+  --accent-halo: #B8648F;
+  --accent-muted: #5F2A45;
 }
 
 /* Alternative palettes (uncomment to switch) */
