@@ -1,9 +1,22 @@
 /* ============================================================
-   THEME TOKENS - Copper Ember + Charcoal (Primary)
+   THEME TOKENS - Amethyst (Active)
    ============================================================ */
 
 :root {
-  /* Copper Ember + Charcoal (Active) */
+  /* Amethyst (Active) */
+  --bg: #07070C;
+  --panel: #0C0A12;
+  --text: #EEEAFB;
+  --muted: #B7B0C8;
+  --accent: #7C3AED;
+  --accent-halo: #A78BFA;
+  --accent-muted: #3A1A6F;
+}
+
+/* Alternative palettes (uncomment to switch) */
+
+/* Copper Ember + Charcoal
+:root {
   --bg: #0A0C0F;
   --panel: #101319;
   --text: #F3EDE7;
@@ -12,8 +25,7 @@
   --accent-halo: #F4A261;
   --accent-muted: #8A4B2E;
 }
-
-/* Alternative palettes (uncomment to switch) */
+*/
 
 /* Emerald
 :root {
@@ -24,17 +36,5 @@
   --accent: #16A34A;
   --accent-halo: #34D399;
   --accent-muted: #0F5132;
-}
-*/
-
-/* Amethyst
-:root {
-  --bg: #07070C;
-  --panel: #0C0A12;
-  --text: #EEEAFB;
-  --muted: #B7B0C8;
-  --accent: #7C3AED;
-  --accent-halo: #A78BFA;
-  --accent-muted: #3A1A6F;
 }
 */
