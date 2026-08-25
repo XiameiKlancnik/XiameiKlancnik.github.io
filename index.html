@@ -1,450 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xiamei Klancnik - Data Scientist</title>
-    <meta name="description" content="Applied data scientist with MSc Data Science (cum laude) and BSc Mathematics. Energy forecasting and optimization adopted by Province of Utrecht. Data analist at the Belastingdienst and founder of WoonBusters, a national rental-market data platform.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xiamei Klancnik - Data Scientist</title>
+<meta name="description" content="Applied data scientist with MSc Data Science (cum laude) and BSc Mathematics. Energy forecasting adopted by Province of Utrecht. Data analist at the Belastingdienst and founder of WoonBusters, a national rental-market data platform.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xiameiklancnik.github.io/">
+<meta property="og:title" content="Xiamei Klancnik - Data Scientist • Building Society-Driven AI">
+<meta property="og:description" content="Delivering impact across energy policy, housing, and public good. Work adopted by Province of Utrecht for energy infrastructure planning.">
+<meta property="og:image" content="https://xiameiklancnik.github.io/xiamei-2026.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #eceae4;
+    --card: #f7f6f2;
+    --sage: #7d8a76;
+    --sage-deep: #55604f;
+    --sage-soft: rgba(125,138,118,0.14);
+    --clay: #b0876a;
+    --clay-soft: rgba(176,135,106,0.16);
+    --ink: #24261f;
+    --ink-2: #5c5f54;
+    --ink-3: #96988c;
+    --grid: rgba(36,38,31,0.08);
+    --shadow: 0 18px 40px rgba(36,38,31,0.09), 0 2px 8px rgba(36,38,31,0.05);
+    --shadow-sm: 0 8px 20px rgba(36,38,31,0.07), 0 1px 4px rgba(36,38,31,0.04);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: "Manrope", sans-serif; font-size: 15px; line-height: 1.6; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
 
-    <!-- Open Graph / WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xiameiKlancnik.github.io/">
-    <meta property="og:title" content="Xiamei Klancnik - Data Scientist • Building Society-Driven AI">
-    <meta property="og:description" content="Delivering impact across energy policy, housing, and public good. Work adopted by Province of Utrecht for energy infrastructure planning.">
-    <meta property="og:image" content="https://xiameiKlancnik.github.io/xiamei-2026.jpg">
+  nav { padding: 22px 0; position: sticky; top: 0; background: rgba(236,234,228,0.88); backdrop-filter: blur(10px); z-index: 10; }
+  .nav-in { display: flex; justify-content: space-between; align-items: center; }
+  .brand { font-family: "DM Serif Display", serif; font-size: 21px; text-decoration: none; color: var(--ink); }
+  .nav-links { display: flex; gap: 8px; align-items: center; }
+  .nav-links a { font-size: 13px; font-weight: 700; color: var(--ink-2); padding: 8px 16px; border-radius: 999px; text-decoration: none; transition: all 180ms ease; }
+  .nav-links a:hover { background: var(--card); color: var(--ink); box-shadow: var(--shadow-sm); }
+  .nav-links a.cta { background: var(--sage-deep); color: #f4f5f0; }
+  .nav-links a.cta:hover { background: var(--ink); }
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://xiameiKlancnik.github.io/">
-    <meta property="twitter:title" content="Xiamei Klancnik - Data Scientist • Building Society-Driven AI">
-    <meta property="twitter:description" content="Delivering impact across energy policy, housing, and public good. Work adopted by Province of Utrecht for energy infrastructure planning.">
-    <meta property="twitter:image" content="https://xiameiKlancnik.github.io/xiamei-2026.jpg">
-    <link rel="stylesheet" href="theme-tokens.css">
-    <link rel="stylesheet" href="base-polish.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  .hero { display: grid; grid-template-columns: 400px 1fr; gap: 56px; padding: 44px 0 40px; align-items: center; }
+  .portrait { position: relative; }
+  .portrait img { width: 100%; border-radius: 24px; display: block; box-shadow: var(--shadow); }
+  .chip { position: absolute; background: var(--card); border-radius: 999px; padding: 8px 16px; font-size: 12px; font-weight: 800; box-shadow: var(--shadow); color: var(--sage-deep); }
+  .chip-1 { top: 18px; left: -22px; }
+  .chip-2 { bottom: 26px; right: -26px; color: var(--clay); }
+  .eyebrow { font-size: 12.5px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; }
+  h1 { font-family: "DM Serif Display", serif; font-size: 54px; line-height: 1.06; font-weight: 400; }
+  h1 em { color: var(--sage-deep); }
+  .lede { margin-top: 18px; font-size: 16px; color: var(--ink-2); max-width: 54ch; }
+  .hero-actions { margin-top: 26px; display: flex; gap: 12px; align-items: center; }
+  .btn { padding: 13px 24px; border-radius: 999px; font-weight: 800; font-size: 14px; text-decoration: none; transition: transform 180ms ease, box-shadow 180ms ease; }
+  .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-main { background: var(--ink); color: var(--bg); }
+  .btn-soft { background: var(--card); color: var(--ink); box-shadow: var(--shadow-sm); }
+
+  section { padding: 42px 0 4px; }
+  h2 { font-family: "DM Serif Display", serif; font-size: 30px; font-weight: 400; margin-bottom: 22px; }
+  h2 small { font-family: "Manrope", sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay); display: block; margin-bottom: 6px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .card { background: var(--card); border-radius: 20px; padding: 26px 28px; box-shadow: var(--shadow-sm); transition: transform 200ms ease, box-shadow 200ms ease; }
+  .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+  .card.accent { background: var(--sage-deep); color: #eef0ea; }
+  .card.accent h3 { color: #f4f5f0; }
+  .card.accent .meta { color: #b9c2b0; }
+  .card.accent p { color: #cdd3c6; }
+  .card h3 { font-family: "DM Serif Display", serif; font-size: 21px; font-weight: 400; }
+  .card .meta { font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); margin: 4px 0 12px; }
+  .card p { font-size: 14px; color: var(--ink-2); }
+  .card p + p { margin-top: 8px; }
+  .tags { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag { font-size: 11.5px; font-weight: 700; color: var(--sage-deep); background: var(--sage-soft); padding: 4px 12px; border-radius: 999px; }
+  .card.accent .tag { color: #e6eadf; background: rgba(255,255,255,0.12); }
+  .card .plink { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 800; color: var(--sage-deep); text-decoration: none; border-bottom: 2px solid var(--clay); }
+
+  .minichart { margin-top: 16px; background: rgba(36,38,31,0.025); border-radius: 12px; padding: 12px 12px 8px; }
+  .card.accent .minichart { background: rgba(255,255,255,0.07); }
+  .minichart svg { display: block; width: 100%; height: auto; }
+  .chart-cap { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-top: 6px; }
+  .card.accent .chart-cap { color: #9aa591; }
+
+  .bigchart { background: var(--card); border-radius: 24px; box-shadow: var(--shadow-sm); padding: 28px 32px 20px; }
+  .bigchart-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .bigchart-head h3 { font-family: "DM Serif Display", serif; font-size: 21px; font-weight: 400; }
+  .bigchart-head .legend { display: flex; gap: 18px; font-size: 12px; font-weight: 700; color: var(--ink-2); }
+  .legend i { display: inline-block; width: 18px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+  .legend .l-forecast i { background: var(--sage-deep); }
+  .legend .l-band i { background: var(--sage-soft); height: 10px; border-radius: 3px; }
+  .legend .l-real i { background: var(--clay); }
+  .bigchart svg { display: block; width: 100%; height: auto; }
+  .bigchart .chart-cap { margin-top: 8px; }
+
+  .timeline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .tl { background: var(--card); border-radius: 20px; box-shadow: var(--shadow-sm); padding: 26px 28px; }
+  .tl h3 { font-family: "DM Serif Display", serif; font-size: 21px; font-weight: 400; margin-bottom: 16px; }
+  .tl-item { position: relative; padding: 0 0 16px 22px; border-left: 2px solid var(--grid); }
+  .tl-item:last-child { padding-bottom: 2px; }
+  .tl-item::before { content: ""; position: absolute; left: -6px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--sage); }
+  .tl-item.hl::before { background: var(--clay); }
+  .tl-item h4 { font-size: 14.5px; font-weight: 800; }
+  .tl-item .when { font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+  .tl-item p { font-size: 13px; color: var(--ink-2); margin-top: 3px; }
+
+  .skill-band { background: var(--card); border-radius: 24px; box-shadow: var(--shadow-sm); padding: 30px 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 36px; }
+  .sk h4 { font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--clay); margin-bottom: 7px; }
+  .sk p { font-size: 13.5px; color: var(--ink-2); }
+
+  .about-band { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; }
+  .about-band .card:hover { transform: none; }
+
+  footer { margin: 48px 0 44px; background: var(--ink); color: #d9dad2; border-radius: 24px; padding: 30px 34px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  footer .big { font-family: "DM Serif Display", serif; font-size: 24px; color: #f4f5f0; }
+  footer a { color: #f4f5f0; font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--sage); }
+  footer .sub { font-size: 13px; color: #8b8d81; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 30px; }
+    .portrait { max-width: 340px; }
+    .grid-2, .grid-3, .timeline-grid, .about-band { grid-template-columns: 1fr; }
+    .skill-band { grid-template-columns: 1fr 1fr; }
+    h1 { font-size: 40px; }
+    .chip-1 { left: 10px; } .chip-2 { right: 10px; }
+  }
+</style>
 </head>
 <body>
-    <nav class="navbar" aria-label="Primary Navigation">
-        <div class="nav-container">
-            <div class="nav-brand">XK</div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+
+<nav><div class="wrap nav-in">
+  <a class="brand" href="#top">Xiamei Klancnik</a>
+  <div class="nav-links">
+    <a href="#now">Now</a>
+    <a href="#work">Projects</a>
+    <a href="#experience">Experience</a>
+    <a class="cta" href="Xiamei_Klancnik_CV.pdf" download>Download CV</a>
+  </div>
+</div></nav>
+
+<div class="wrap" id="top">
+  <div class="hero">
+    <div class="portrait">
+      <img src="xiamei-2026.jpg" alt="Xiamei Klancnik">
+      <div class="chip chip-1">Data Scientist</div>
+      <div class="chip chip-2">Nijmegen, NL</div>
+    </div>
+    <div>
+      <div class="eyebrow">Society-driven AI</div>
+      <h1>Forecasts for the grid, fairness for the <em>housing market.</em></h1>
+      <p class="lede">MSc Data Science (cum laude) and BSc Mathematics. My energy models steer infrastructure planning at the Province of Utrecht; my Bayesian rent model checks 55,000+ Dutch listings against the law every quarter. Days: Belastingdienst. Nights: WoonBusters.</p>
+      <div class="hero-actions">
+        <a class="btn btn-main" href="#work">See my work</a>
+        <a class="btn btn-soft" href="Xiamei_Klancnik_CV.pdf" download>Download CV</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="now">
+    <h2><small>What I do now</small>Two hats, one method</h2>
+    <div class="grid-2">
+      <div class="card accent">
+        <h3>Data Analist · Belastingdienst</h3>
+        <div class="meta">Feb 2026 — present</div>
+        <p>Work-allocation tool for team leaders and the regiekamer: forecasting case inflow, predicting legal-deadline breaches, and distributing work with linear optimization. Plus Teradata → DB2 migration and SAS reporting.</p>
+        <div class="minichart">
+          <svg viewBox="0 0 300 78" role="img" aria-label="Illustration: optimizer distributing cases across teams">
+            <text x="0" y="12" font-size="9" fill="#9aa591" font-family="Manrope">Team A</text>
+            <rect x="52" y="5" width="170" height="8" rx="4" fill="rgba(255,255,255,0.28)"/>
+            <text x="0" y="30" font-size="9" fill="#9aa591" font-family="Manrope">Team B</text>
+            <rect x="52" y="23" width="128" height="8" rx="4" fill="rgba(255,255,255,0.28)"/>
+            <text x="0" y="48" font-size="9" fill="#9aa591" font-family="Manrope">Team C</text>
+            <rect x="52" y="41" width="196" height="8" rx="4" fill="rgba(255,255,255,0.28)"/>
+            <text x="0" y="66" font-size="9" fill="#9aa591" font-family="Manrope">Team D</text>
+            <rect x="52" y="59" width="88" height="8" rx="4" fill="rgba(255,255,255,0.28)"/>
+            <rect x="222" y="5" width="34" height="8" rx="4" fill="#c9a184"/>
+            <rect x="180" y="23" width="30" height="8" rx="4" fill="#c9a184"/>
+            <rect x="140" y="59" width="26" height="8" rx="4" fill="#c9a184"/>
+            <line x1="266" y1="2" x2="266" y2="72" stroke="#c9a184" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <text x="272" y="40" font-size="8.5" fill="#c9a184" font-family="Manrope" transform="rotate(90 272 40)" text-anchor="middle">deadline</text>
+          </svg>
+          <div class="chart-cap">Optimizer view — deadline-risk cases (clay) reassigned first</div>
         </div>
-    </nav>
-
-    <section id="home" class="hero hero-bg">
-        <div class="container">
-            <div class="hero-grid">
-                <img src="xiamei-2026.jpg" alt="Xiamei Klancnik profile photo" class="hero-profile-picture">
-                <div class="hero-content">
-                    <h1 class="hero-title">Xiamei Klancnik</h1>
-                    <h2 class="hero-subtitle">Data Scientist • Building Society-Driven AI</h2>
-                    <p class="hero-description">Delivering impact across energy policy, housing, and public good</p>
-                    <p class="hero-description" style="font-size: 1rem; margin-top: -1rem;">Applied data scientist with MSc Data Science (cum laude) and BSc Mathematics. Currently data analist at the Belastingdienst and founder of WoonBusters, a national rental-market data platform. Previously built energy forecasting adopted by the Province of Utrecht.</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="Xiamei_Klancnik_CV.pdf" class="btn btn-secondary" download>Download CV</a>
-                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                    </div>
-                </div>
-            </div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Linear optimization</span><span class="tag">SAS</span><span class="tag">DB2</span></div>
+      </div>
+      <div class="card">
+        <h3>Founder · WoonBusters</h3>
+        <div class="meta">Oct 2025 — present · <a href="https://woonbusters.nl" style="color:var(--sage-deep)">woonbusters.nl</a></div>
+        <p>The full advertised Dutch rental market, monitored daily. Bayesian legal-rent model validated against the Huurcommissie's check, a public market report, and a B2B data API. Solo-built, solo-operated.</p>
+        <div class="minichart">
+          <svg viewBox="0 0 300 78" role="img" aria-label="Illustration: posterior distribution of the legal maximum rent">
+            <line x1="10" y1="66" x2="290" y2="66" stroke="rgba(36,38,31,0.15)" stroke-width="1"/>
+            <path d="M14,65 C60,64 88,60 108,48 C128,36 138,14 158,12 C178,14 190,38 212,52 C232,62 260,65 286,65 L286,66 L14,66 Z" fill="rgba(125,138,118,0.22)"/>
+            <path d="M14,65 C60,64 88,60 108,48 C128,36 138,14 158,12 C178,14 190,38 212,52 C232,62 260,65 286,65" fill="none" stroke="#55604f" stroke-width="2"/>
+            <line x1="158" y1="8" x2="158" y2="66" stroke="#b0876a" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <text x="163" y="16" font-size="9" fill="#b0876a" font-family="Manrope" font-weight="700">legal max</text>
+            <path d="M108,48 C128,36 138,14 158,12 C178,14 190,38 212,52 L212,66 L108,66 Z" fill="rgba(176,135,106,0.20)"/>
+          </svg>
+          <div class="chart-cap">Bayesian huurcheck — posterior per dwelling, calibrated interval</div>
         </div>
-    </section>
+        <div class="tags"><span class="tag">Bayesian</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Playwright</span></div>
+      </div>
+    </div>
+  </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-
-            <!-- Two column layout for About text -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                <div>
-                    <p>What I love most about data science? <strong>It can advance ANY topic.</strong> My background spans mathematics, physical chemistry, and computer science, which gives me a unique perspective when tackling complex challenges. I've worked on everything from colorectal cancer prediction and energy grid optimization to nutrition tracking, housing transparency, and media bias detection. It's this interdisciplinary foundation that keeps me energized.</p>
-
-                    <p>I thrive in ambitious environments where I can work on <strong>society-driven problems</strong>. Real impact comes from combining rigorous methodology with practical application. The Province of Utrecht adopted my energy forecasting work for infrastructure planning, which showed me how well-designed ML systems can actually support policy decisions. I particularly enjoy working on optimization problems, time-series forecasting, and building AI systems that respect user privacy.</p>
-                </div>
-
-                <div>
-                    <p>I work well independently but really thrive in small, focused teams. Clear communication matters to me, whether I'm talking to technical colleagues or non-technical stakeholders. I'm comfortable translating complex technical work into actionable insights, and I bring both analytical rigor and product intuition to every project. I also enjoy mentoring and learning from others.</p>
-
-                    <h3>What Drives Me</h3>
-                    <ul class="skills-list">
-                        <li>Creative problem-solving & thinking big</li>
-                        <li>Ambition and impactful environments</li>
-                        <li>Building solutions and research with real impact</li>
-                        <li>Independent but collaborative</li>
-                        <li>Always learning, always exploring</li>
-                    </ul>
-
-                    <h3>Beyond Data Science</h3>
-                    <p>When I'm not training models, you'll find me: cooking or baking (food science meets creativity!), at the gym, diving into a good book, 3D printing and modeling, painting, or blasting metal music. I'm also a product builder at heart: I love taking ideas from concept to reality.</p>
-                </div>
-            </div>
-
-            <!-- Two column layout for Key Strengths and Technology boxes -->
-            <div class="about-grid">
-                <div class="expertise-box">
-                    <h3>Key Strengths</h3>
-
-                    <div class="expertise-section">
-                        <ul class="skills-list">
-                            <li><strong>Strategic:</strong> Architected end-to-end energy system adopted by Province of Utrecht for policy decisions</li>
-                            <li><strong>Communicator:</strong> Translating complex ML to non-technical stakeholders (Province, entrepreneurs, clinicians)</li>
-                            <li><strong>Independent:</strong> Sole data scientist in R&D environment; solo-built WoonBusters, a national data platform in production</li>
-                            <li><strong>Creative:</strong> Finding novel solutions to real-world problems (transfer learning for limited data, Bayesian legal-rent estimation, LLM-powered data extraction)</li>
-                            <li><strong>Focused:</strong> Shipping complete products, not just prototypes</li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-section">
-                        <h4>Interdisciplinary Focus</h4>
-                        <div class="focus-bars">
-                            <div class="bar-item">
-                                <span class="bar-label">Health</span>
-                                <div class="bar-track">
-                                    <div class="bar-fill" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="bar-item">
-                                <span class="bar-label">Energy</span>
-                                <div class="bar-track">
-                                    <div class="bar-fill" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                            <div class="bar-item">
-                                <span class="bar-label">Finance</span>
-                                <div class="bar-track">
-                                    <div class="bar-fill" style="width: 70%;"></div>
-                                </div>
-                            </div>
-                            <div class="bar-item">
-                                <span class="bar-label">Society & Policy</span>
-                                <div class="bar-track">
-                                    <div class="bar-fill" style="width: 75%;"></div>
-                                </div>
-                            </div>
-                            <div class="bar-item">
-                                <span class="bar-label">Astronomy</span>
-                                <div class="bar-track">
-                                    <div class="bar-fill" style="width: 60%;"></div>
-                                </div>
-                            </div>
-                            <div class="bar-item">
-                                <span class="bar-label">Nutrition</span>
-                                <div class="bar-track">
-                                    <div class="bar-fill" style="width: 65%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="expertise-box">
-                    <h3>Technology & Tools</h3>
-
-                    <div class="expertise-section">
-                        <h4>Programming</h4>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-rating">Proficient</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">SQL</span>
-                                <span class="skill-rating">Working knowledge</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">SAS</span>
-                                <span class="skill-rating">Working knowledge</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Dart/Flutter</span>
-                                <span class="skill-rating">Working knowledge</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">TypeScript/JS</span>
-                                <span class="skill-rating">Working knowledge</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">R</span>
-                                <span class="skill-rating">Working knowledge</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">C++</span>
-                                <span class="skill-rating">Working knowledge</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Java</span>
-                                <span class="skill-rating">Working knowledge</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="expertise-section">
-                        <h4>Deep Learning & Forecasting</h4>
-                        <p>PyTorch, Transformers, LSTM, Transfer Learning, scikit-learn, LightGBM</p>
-                    </div>
-
-                    <div class="expertise-section">
-                        <h4>Optimization</h4>
-                        <p>Linear programming (battery sizing, work allocation), scenario modelling, uncertainty analysis</p>
-                    </div>
-
-                    <div class="expertise-section">
-                        <h4>LLM & NLP Applications</h4>
-                        <p>OpenAI API, RAG (Retrieval Augmented Generation), XLM-RoBERTa, Prompt Engineering, Embeddings & Semantic Search, Multilingual NLP</p>
-                    </div>
-
-                    <div class="expertise-section">
-                        <h4>Statistics & Methods</h4>
-                        <p>Bayesian models, (Generalized) linear models, Non-parametric methods, Monte Carlo simulation, Causal inference, Uncertainty analysis</p>
-                    </div>
-
-                    <div class="expertise-section">
-                        <h4>Production & Deployment</h4>
-                        <p>FastAPI, Flask, PostgreSQL, Docker, GitHub Actions, pytest & Testing, Linux servers & systemd, Stripe, Edge Functions</p>
-                    </div>
-
-                    <div class="expertise-section">
-                        <h4>Full-Stack Development</h4>
-                        <p>Flutter (iOS/Android), Next.js, React, REST APIs, Real-time Sync</p>
-                    </div>
-
-                    <div class="expertise-section">
-                        <h4>Data Engineering & Automation</h4>
-                        <p>ETL Pipelines, Teradata → DB2 Migration, Parallel & Async Processing, Web Scraping at Scale (Playwright), Batch API Optimization</p>
-                    </div>
-                </div>
-            </div>
+  <section>
+    <div class="bigchart">
+      <div class="bigchart-head">
+        <h3>Year-ahead energy forecasting, 15-minute resolution</h3>
+        <div class="legend">
+          <span class="l-forecast"><i></i>forecast</span>
+          <span class="l-band"><i></i>uncertainty band</span>
+          <span class="l-real"><i></i>realized</span>
         </div>
-    </section>
+      </div>
+      <svg viewBox="0 0 1020 190" role="img" aria-label="Illustration: energy demand forecast with uncertainty band versus realized demand">
+        <line x1="30" y1="40" x2="1000" y2="40" stroke="rgba(36,38,31,0.06)" stroke-width="1"/>
+        <line x1="30" y1="85" x2="1000" y2="85" stroke="rgba(36,38,31,0.06)" stroke-width="1"/>
+        <line x1="30" y1="130" x2="1000" y2="130" stroke="rgba(36,38,31,0.06)" stroke-width="1"/>
+        <line x1="30" y1="168" x2="1000" y2="168" stroke="rgba(36,38,31,0.14)" stroke-width="1"/>
+        <text x="30" y="184" font-size="10" fill="#96988c" font-family="Manrope">winter</text>
+        <text x="270" y="184" font-size="10" fill="#96988c" font-family="Manrope">spring</text>
+        <text x="510" y="184" font-size="10" fill="#96988c" font-family="Manrope">summer</text>
+        <text x="750" y="184" font-size="10" fill="#96988c" font-family="Manrope">autumn</text>
+        <text x="975" y="184" font-size="10" fill="#96988c" font-family="Manrope">winter</text>
+        <path d="M30,52 C120,44 200,62 290,84 C380,106 440,124 510,130 C580,136 640,122 730,98 C820,74 920,52 1000,44
+                 L1000,76 C920,84 820,102 730,122 C640,142 580,152 510,150 C440,148 380,132 290,112 C200,92 120,74 30,78 Z"
+              fill="rgba(125,138,118,0.18)"/>
+        <path d="M30,65 C120,59 200,77 290,98 C380,119 440,138 510,140 C580,142 640,132 730,110 C820,88 920,63 1000,60"
+              fill="none" stroke="#55604f" stroke-width="2.5"/>
+        <path d="M30,70 C90,60 150,74 230,92 C310,112 360,128 430,136 C470,140 500,146 540,138 C620,126 680,124 760,104 C850,82 930,70 1000,66"
+              fill="none" stroke="#b0876a" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round"/>
+        <circle cx="510" cy="140" r="4" fill="#55604f"/>
+        <text x="510" y="122" font-size="10.5" font-weight="700" fill="#55604f" font-family="Manrope" text-anchor="middle">solar dip</text>
+        <circle cx="1000" cy="60" r="4" fill="#55604f"/>
+        <text x="988" y="46" font-size="10.5" font-weight="700" fill="#55604f" font-family="Manrope" text-anchor="end">peak load →  battery sizing</text>
+      </svg>
+      <div class="chart-cap">Illustrative — the shape of the INNAX pipeline: growth, weather and price signals in; hub scenarios and battery dimensions out. Adopted by the Province of Utrecht.</div>
+    </div>
+  </section>
 
-    <section id="projects" class="projects projects-bg">
-        <div class="container">
-            <h2 class="section-title">Projects & Research</h2>
-            <div class="projects-grid">
-
-                <article class="project-card card featured">
-                    <div class="project-header">
-                        <h3>INNAX Energy Hubs</h3>
-                    </div>
-                    <p><strong>Adopted by Province of Utrecht for evaluating energy hub scenarios and grid congestion strategies.</strong> Built end-to-end system: ETL pipelines processing 15-minute resolution data, year-ahead forecasting integrating growth/weather/price signals, and linear programming for cost-optimal battery/generator sizing with degradation constraints. Delivered policy dashboards translating grid hotspots into actionable infrastructure decisions.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Policy Decision Support</span>
-                        <span class="tag">Time-series Forecasting</span>
-                        <span class="tag">Linear Optimization</span>
-                        <span class="tag">Battery Degradation Modeling</span>
-                        <span class="tag">ETL Pipelines</span>
-                        <span class="tag">Python</span>
-                    </div>
-                </article>
-
-                <article class="project-card card featured">
-                    <div class="project-header">
-                        <h3>Ingestigate</h3>
-                        <span class="project-badge">Solo Project</span>
-                    </div>
-                    <p><strong>Nutrition intelligence app, shipped end-to-end.</strong> Sole developer, designer, and product owner. LLM-powered food analysis with holistic health framework, real-time sync, offline support, and personalized AI coaching. Cross-platform (iOS/Android) production system built from scratch with Flutter.</p>
-                    <div class="tech-tags">
-                        <span class="tag">LLMs</span>
-                        <span class="tag">Flutter</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Edge Functions</span>
-                        <span class="tag">Cross-Platform</span>
-                        <span class="tag">Real-time Sync</span>
-                    </div>
-                    <a href="ingestigate-demo.html" class="project-link">View Demo →</a>
-                </article>
-
-                <article class="project-card card featured">
-                    <div class="project-header">
-                        <h3>Woonbusters.nl</h3>
-                        <span class="project-badge">Solo Project</span>
-                    </div>
-                    <p><strong>National rental-market data platform monitoring the full advertised rental supply of the Netherlands daily.</strong> 1,000+ agency sites scraped, deduplicated and tested against the legal rent-points system (WWS). Bayesian model estimating the legal maximum rent per dwelling, validated against the Huurcommissie's official check. Public quarterly market report (55,000+ listings), B2B data API for municipalities, paid subscriptions via Stripe. Built and operated entirely solo.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Bayesian Modelling</span>
-                        <span class="tag">Web Scraping</span>
-                        <span class="tag">LLM Extraction</span>
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Next.js</span>
-                    </div>
-                    <a href="https://woonbusters.nl" class="project-link" target="_blank">Visit Site →</a>
-                </article>
-
-                <article class="project-card card featured">
-                    <div class="project-header">
-                        <h3>WorldVue AI</h3>
-                        <span class="project-badge">Solo Project</span>
-                    </div>
-                    <p><strong>Multilingual media bias detection for democratic resilience.</strong> Designed and built solo from concept to deployment. Custom CORE24 framework analyzing political bias across 12 dimensions, XLM-RoBERTa entity framing, and interactive world map visualization. Applications in media literacy, policy research, and fact-checking. Demonstrates large-scale transformer deployment with responsible AI practices.</p>
-                    <div class="tech-tags">
-                        <span class="tag">XLM-RoBERTa</span>
-                        <span class="tag">Multilingual NLP</span>
-                        <span class="tag">Bias Detection</span>
-                        <span class="tag">Policy Research</span>
-                        <span class="tag">Flask API</span>
-                        <span class="tag">Data Visualization</span>
-                    </div>
-                    <a href="worldvue-demo.html" class="project-link">View Demo →</a>
-                </article>
-
-                <article class="project-card card">
-                    <div class="project-header">
-                        <h3>MSc Thesis</h3>
-                    </div>
-                    <p><em>Transforming Electricity Forecasting: The Power of Transfer Learning in Limited Data Scenarios.</em> Transfer learning consistently outperformed classical baselines and from-scratch deep models in limited-data regimes.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Transformers</span>
-                        <span class="tag">Transfer Learning</span>
-                        <span class="tag">LSTM</span>
-                        <span class="tag">LightGBM</span>
-                        <span class="tag">Time-series</span>
-                        <span class="tag">Anomaly Detection</span>
-                    </div>
-                </article>
-
-                <article class="project-card card">
-                    <div class="project-header">
-                        <h3>Radboudumc Research Internship</h3>
-                    </div>
-                    <p><strong>Spatiotemporal metastasis prediction for colorectal cancer.</strong> Developed Monte Carlo simulation models and statistical ML frameworks to inform clinical decision-making. Delivered interpretable prototypes with uncertainty quantification for medical stakeholders.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Healthcare ML</span>
-                        <span class="tag">Monte Carlo Simulation</span>
-                        <span class="tag">Uncertainty Quantification</span>
-                        <span class="tag">Clinical Decision Support</span>
-                    </div>
-                </article>
-
-            </div>
+  <section id="work">
+    <h2><small>Selected work</small>Projects that shipped</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>INNAX Energy Hubs</h3>
+        <div class="meta">Production · Province of Utrecht</div>
+        <p>Year-ahead forecasting and battery-sizing optimization with degradation constraints, behind energy-hub scenarios and grid-congestion strategy.</p>
+        <div class="tags"><span class="tag">Forecasting</span><span class="tag">Linear optimization</span><span class="tag">ETL</span></div>
+      </div>
+      <div class="card">
+        <h3>Bayesian Huurcheck</h3>
+        <div class="meta">Production · WoonBusters</div>
+        <p>Legal-maximum-rent estimation for 55,000+ listings per quarter, holdout-validated with calibrated confidence intervals against the official check.</p>
+        <div class="tags"><span class="tag">Bayesian</span><span class="tag">WWS</span><span class="tag">PostgreSQL</span></div>
+      </div>
+      <div class="card">
+        <h3>Transfer Learning for Forecasting</h3>
+        <div class="meta">MSc thesis · grade 8</div>
+        <p>Transfer learning consistently beats classical baselines and from-scratch deep models in limited-data regimes.</p>
+        <div class="minichart">
+          <svg viewBox="0 0 300 70" role="img" aria-label="Illustration: transfer learning converges faster and lower than training from scratch">
+            <line x1="10" y1="60" x2="290" y2="60" stroke="rgba(36,38,31,0.15)" stroke-width="1"/>
+            <path d="M14,12 C60,40 110,50 180,54 C230,56 270,57 288,57" fill="none" stroke="#55604f" stroke-width="2"/>
+            <path d="M14,8 C80,20 150,32 210,38 C250,42 275,44 288,45" fill="none" stroke="#96988c" stroke-width="2" stroke-dasharray="4 4"/>
+            <text x="286" y="53" font-size="9" fill="#55604f" font-family="Manrope" font-weight="700" text-anchor="end">transfer</text>
+            <text x="286" y="38" font-size="9" fill="#96988c" font-family="Manrope" font-weight="700" text-anchor="end">from scratch</text>
+          </svg>
+          <div class="chart-cap">Error vs training data — the gap is the thesis</div>
         </div>
-    </section>
+      </div>
+      <div class="card">
+        <h3>Ingestigate</h3>
+        <div class="meta">Completed · solo</div>
+        <p>Nutrition intelligence app: LLM food analysis, holistic health framework, cross-platform iOS/Android. Shipped end-to-end with Flutter.</p>
+        <div class="tags"><span class="tag">LLM</span><span class="tag">Flutter</span><span class="tag">Edge Functions</span></div>
+        <a class="plink" href="ingestigate-demo.html">View demo →</a>
+      </div>
+      <div class="card">
+        <h3>Metastasis prediction</h3>
+        <div class="meta">Research internship · Radboudumc</div>
+        <p>Monte Carlo simulation models for spatiotemporal colorectal cancer metastasis prediction, with uncertainty quantification for clinicians.</p>
+        <div class="tags"><span class="tag">Monte Carlo</span><span class="tag">Healthcare ML</span></div>
+      </div>
+      <div class="card">
+        <h3>WorldVue AI</h3>
+        <div class="meta">Prototype · solo</div>
+        <p>Multilingual media-bias detection: CORE24 framework across 12 dimensions, XLM-RoBERTa entity framing, interactive world map.</p>
+        <div class="tags"><span class="tag">XLM-RoBERTa</span><span class="tag">NLP</span></div>
+        <a class="plink" href="worldvue-demo.html">View demo →</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Experience & Education</h2>
-            <div class="timeline-grid">
-                <div class="timeline-column">
-                    <h3>Experience</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h4>Data Analist • Belastingdienst</h4>
-                                <p style="color: var(--text-tertiary); font-size: 0.9rem; margin-top: 0.25rem;">Feb 2026 – present. Work-allocation tool in Python for team leaders and the regiekamer: demand forecasting of case inflow, prediction of cases at risk of exceeding legal expiration dates, linear-programming optimization. Teradata → DB2 migration, SAS reporting on payroll-tax data.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h4>Founder • WoonBusters</h4>
-                                <p style="color: var(--text-tertiary); font-size: 0.9rem; margin-top: 0.25rem;">Oct 2025 – present. National rental-market data platform: 1,000+ sources daily, Bayesian legal-rent model, public market report, B2B API. Solo-built and operated.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h4>Data Scientist R&D • INNAX</h4>
-                                <p style="color: var(--text-tertiary); font-size: 0.9rem; margin-top: 0.25rem;">Feb 2024 – Feb 2026. Built energy forecasting system adopted by Province of Utrecht for infrastructure planning. Developed linear optimization models for battery sizing with degradation constraints.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h4>Research Intern • Radboudumc</h4>
-                                <p style="color: var(--text-tertiary); font-size: 0.9rem; margin-top: 0.25rem;">Developed Monte Carlo simulation models for spatiotemporal colorectal cancer metastasis prediction to inform clinical decision-making.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h4>Student Assistant • Evolutionary Biology</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h4>Student Assistant • Thermodynamics & Physical Chemistry</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h4>Communications & Front Desk • Radboud University</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h4>Powerlifting Coach & Volunteer</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-column">
-                    <h3>Education</h3>
-                    <div class="timeline">
-                        <div class="timeline-item highlight">
-                            <div class="timeline-content">
-                                <h4>MSc Data Science</h4>
-                                <p class="distinction">cum laude</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h4>Pre-master Computer Science</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h4>BSc Mathematics</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h4>Minor Physical Chemistry</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <section id="experience">
+    <h2><small>Track record</small>Experience &amp; education</h2>
+    <div class="timeline-grid">
+      <div class="tl">
+        <h3>Experience</h3>
+        <div class="tl-item hl">
+          <h4>Data Analist · Belastingdienst</h4>
+          <div class="when">Feb 2026 — present</div>
+          <p>Case-flow forecasting, deadline-risk prediction and work-allocation optimization for team leaders and the regiekamer.</p>
         </div>
-    </section>
-
-    <section id="contact" class="contact contact-bg">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h3>Location</h3>
-                        <p>Nijmegen, NL</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Email</h3>
-                        <p><a href="mailto:xklancnik@gmail.com">xklancnik@gmail.com</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>LinkedIn</h3>
-                        <p><a href="https://www.linkedin.com/in/xiamei-klancnik-26a4b3233/" target="_blank">linkedin.com/in/xiamei-klancnik-26a4b3233</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Languages</h3>
-                        <p>Dutch (native) • English (fluent)</p>
-                    </div>
-                </div>
-            </div>
+        <div class="tl-item hl">
+          <h4>Founder · WoonBusters</h4>
+          <div class="when">Oct 2025 — present</div>
+          <p>National rental-market data platform: 1,000+ sources daily, Bayesian legal-rent model, public market report, B2B API.</p>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Xiamei Klancnik. All rights reserved.</p>
+        <div class="tl-item">
+          <h4>Data Scientist R&amp;D · INNAX</h4>
+          <div class="when">Feb 2024 — Feb 2026</div>
+          <p>Energy forecasting and optimization system adopted by the Province of Utrecht for infrastructure planning.</p>
         </div>
-    </footer>
+        <div class="tl-item">
+          <h4>Research Intern · Radboudumc</h4>
+          <p>Monte Carlo metastasis-prediction models to inform clinical decision-making.</p>
+        </div>
+      </div>
+      <div class="tl">
+        <h3>Education</h3>
+        <div class="tl-item hl">
+          <h4>MSc Data Science — cum laude</h4>
+          <div class="when">Radboud University</div>
+          <p>Thesis: Transfer Learning for Limited-Data Forecasting (8). Statistical ML (8.5), Machine Learning (9), Law &amp; Technology (10).</p>
+        </div>
+        <div class="tl-item">
+          <h4>Pre-master Computer Science</h4>
+          <div class="when">Radboud University</div>
+        </div>
+        <div class="tl-item">
+          <h4>BSc Mathematics</h4>
+          <div class="when">Radboud University · minor Physical Chemistry</div>
+          <p>Thesis: Three-Body Problem (8) — numerical methods, stability and error analysis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section>
+    <h2><small>Toolbox</small>What I work with</h2>
+    <div class="skill-band">
+      <div class="sk"><h4>Modelling</h4><p>PyTorch, Transformers, LSTM, scikit-learn, LightGBM, Bayesian models, Monte Carlo, causal inference</p></div>
+      <div class="sk"><h4>Optimization</h4><p>Linear programming, scenario modelling, uncertainty analysis</p></div>
+      <div class="sk"><h4>Languages</h4><p>Python, SQL, SAS, TypeScript, R, C++, Java</p></div>
+      <div class="sk"><h4>Data engineering</h4><p>ETL, PostgreSQL, Teradata → DB2, async processing, web scraping at scale</p></div>
+      <div class="sk"><h4>Production</h4><p>FastAPI, Docker, GitHub Actions, pytest, Linux &amp; systemd, Stripe</p></div>
+      <div class="sk"><h4>LLM applications</h4><p>OpenAI API, RAG, embeddings, multilingual NLP</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><small>About</small>Beyond the models</h2>
+    <div class="about-band">
+      <div class="card">
+        <p>What I love most about data science? <strong>It can advance any topic.</strong> My background spans mathematics, physical chemistry and computer science, and I've applied it to cancer prediction, grid congestion, nutrition, housing transparency and media bias. Real impact comes from combining rigorous methodology with practical application — the Province of Utrecht adopting my forecasting work for policy showed me what well-designed ML can actually do.</p>
+        <p>I work well independently but thrive in small, focused teams, and I'm comfortable translating complex work for provinces, entrepreneurs and clinicians alike.</p>
+      </div>
+      <div class="card">
+        <p><strong>Off the clock:</strong> cooking and baking (food science meets creativity), the gym, good books, 3D printing, painting, and metal music. Product builder at heart — I love taking ideas from concept to reality.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="big">Let's talk. <a href="mailto:xklancnik@gmail.com">xklancnik@gmail.com</a></div>
+    <div class="sub">© 2026 Xiamei Klancnik · Nijmegen, NL · <a style="border-bottom-color:#8b8d81" href="https://www.linkedin.com/in/xiamei-klancnik-26a4b3233/">LinkedIn</a></div>
+  </footer>
+</div>
+
 </body>
 </html>
