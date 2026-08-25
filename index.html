@@ -81,13 +81,29 @@
   .card .plink { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 800; color: var(--sage-deep); text-decoration: none; border-bottom: 2px solid var(--clay); }
 
   .chart-cap { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: var(--ink-3); margin-top: 14px; }
-  .citychart { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 40px; }
-  .cityrow { display: grid; grid-template-columns: 110px 1fr 40px; align-items: center; gap: 10px; padding: 3px 0; }
-  .cname { font-size: 12.5px; font-weight: 700; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .ctrack { display: block; height: 9px; background: rgba(36,38,31,0.05); border-radius: 5px; overflow: hidden; }
-  .ctrack i { display: block; height: 100%; background: var(--sage); border-radius: 5px; }
-  .citycol:first-child .cityrow:nth-child(-n+3) .ctrack i { background: var(--sage-deep); }
-  .cval { font-size: 12.5px; font-weight: 800; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+  .panel3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 26px; }
+  .panel { border-left: 1px solid rgba(36,38,31,0.09); padding-left: 22px; }
+  .panel:first-child { border-left: 0; padding-left: 0; }
+  .panel h4 { font-family: "DM Serif Display", serif; font-size: 17px; font-weight: 400; margin-bottom: 5px; }
+  .panel .psub { font-size: 12.5px; color: var(--ink-2); margin-bottom: 14px; min-height: 56px; }
+  .panel .chart-cap { margin-top: 10px; }
+  .panel svg { display: block; width: 100%; height: auto; }
+  .cityrow { display: grid; grid-template-columns: 84px 1fr 34px; align-items: center; gap: 8px; padding: 2.5px 0; }
+  .cityrow.dim { opacity: 0.62; }
+  .cname { font-size: 12px; font-weight: 700; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ctrack { display: block; height: 8px; background: rgba(36,38,31,0.05); border-radius: 4px; overflow: hidden; }
+  .ctrack i { display: block; height: 100%; background: var(--sage); border-radius: 4px; }
+  .citycompact .cityrow:nth-child(-n+3) .ctrack i { background: var(--sage-deep); }
+  .cval { font-size: 12px; font-weight: 800; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+  .lolli { padding-top: 2px; }
+  .lrow { display: grid; grid-template-columns: 86px 1fr; align-items: center; gap: 8px; padding: 5.5px 0; }
+  .lname { font-size: 11.5px; font-weight: 700; color: var(--ink-2); white-space: nowrap; }
+  .ltrack { position: relative; display: block; height: 3px; background: rgba(36,38,31,0.07); border-radius: 2px; margin-right: 34px; }
+  .ltrack i { position: absolute; left: 0; top: 0; height: 100%; background: var(--sage); border-radius: 2px; }
+  .ltrack b { position: absolute; top: 50%; transform: translate(6px, -50%); font-size: 11px; font-weight: 800; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .ltrack b::before { content: ""; position: absolute; left: -8px; top: 50%; transform: translate(0, -50%); width: 9px; height: 9px; border-radius: 50%; background: var(--sage-deep); }
+  .lrow:nth-child(n+6) .ltrack b::before { background: var(--clay); }
+  .lrow:nth-child(n+6) .ltrack i { background: var(--clay); }
 
   .bigchart { background: var(--card); border-radius: 24px; box-shadow: var(--shadow-sm); padding: 28px 32px 20px; }
   .bigchart-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
@@ -122,7 +138,9 @@
     .portrait { max-width: 340px; }
     .grid-2, .grid-3, .timeline-grid, .about-band { grid-template-columns: 1fr; }
     .skill-band { grid-template-columns: 1fr 1fr; }
-    .citychart { grid-template-columns: 1fr; }
+    .panel3 { grid-template-columns: 1fr; }
+    .panel { border-left: 0; padding-left: 0; }
+    .panel .psub { min-height: 0; }
     h1 { font-size: 40px; }
     .chip-1 { left: 10px; } .chip-2 { right: 10px; }
   }
@@ -163,13 +181,13 @@
     <div class="grid-2">
       <div class="card accent">
         <h3>Data Analist · Belastingdienst</h3>
-        <div class="meta">Feb 2026 — present</div>
+        <div class="meta">Feb 2026 – present</div>
         <p>Work-allocation tool for team leaders and the regiekamer: forecasting case inflow, predicting legal-deadline breaches, and distributing work with linear optimization. Plus Teradata → DB2 migration and SAS reporting.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">Linear optimization</span><span class="tag">SAS</span><span class="tag">DB2</span></div>
       </div>
       <div class="card">
         <h3>Founder · WoonBusters</h3>
-        <div class="meta">Oct 2025 — present · <a href="https://woonbusters.nl" style="color:var(--sage-deep)">woonbusters.nl</a></div>
+        <div class="meta">Oct 2025 – present · <a href="https://woonbusters.nl" style="color:var(--sage-deep)">woonbusters.nl</a></div>
         <p>The full advertised Dutch rental market, monitored daily. Bayesian legal-rent model validated against the Huurcommissie's check, a public market report, and a B2B data API. Solo-built, solo-operated.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">Bayesian modelling</span><span class="tag">LLM extraction</span><span class="tag">Scraping at scale</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Next.js / TypeScript</span><span class="tag">Linux &amp; systemd</span><span class="tag">Stripe</span><span class="tag">Geocoding</span></div>
       </div>
@@ -179,37 +197,68 @@
   <section>
     <div class="bigchart">
       <div class="bigchart-head">
-        <h3>Rents above the legal maximum — my own data</h3>
-        <span class="tag" style="background:var(--clay-soft); color:var(--clay)">National average: 54.9%</span>
+        <h3>What 55,144 listings tell you</h3>
+        <span class="tag" style="background:var(--clay-soft); color:var(--clay)">All numbers from my own platform</span>
       </div>
-      <p style="font-size:13.5px; color:var(--ink-2); margin-bottom:18px; max-width:74ch;">Share of advertised rental listings priced above the WWS legal maximum, per city. Every number comes from my own platform: WoonBusters monitors 1,000+ sources daily and scores each dwelling with the Bayesian huurcheck.</p>
-      <div class="citychart">
-        <div class="citycol">
-          <div class="cityrow"><span class="cname">Groningen</span><span class="ctrack"><i style="width:100%"></i></span><span class="cval">74%</span></div>
-          <div class="cityrow"><span class="cname">Nijmegen</span><span class="ctrack"><i style="width:98.6%"></i></span><span class="cval">73%</span></div>
-          <div class="cityrow"><span class="cname">Tilburg</span><span class="ctrack"><i style="width:95.9%"></i></span><span class="cval">71%</span></div>
-          <div class="cityrow"><span class="cname">Arnhem</span><span class="ctrack"><i style="width:93.2%"></i></span><span class="cval">69%</span></div>
-          <div class="cityrow"><span class="cname">Delft</span><span class="ctrack"><i style="width:90.5%"></i></span><span class="cval">67%</span></div>
-          <div class="cityrow"><span class="cname">Maastricht</span><span class="ctrack"><i style="width:83.8%"></i></span><span class="cval">62%</span></div>
-          <div class="cityrow"><span class="cname">Rotterdam</span><span class="ctrack"><i style="width:82.4%"></i></span><span class="cval">61%</span></div>
-          <div class="cityrow"><span class="cname">Den Bosch</span><span class="ctrack"><i style="width:82.4%"></i></span><span class="cval">61%</span></div>
-          <div class="cityrow"><span class="cname">Utrecht</span><span class="ctrack"><i style="width:79.7%"></i></span><span class="cval">59%</span></div>
-          <div class="cityrow"><span class="cname">Eindhoven</span><span class="ctrack"><i style="width:79.7%"></i></span><span class="cval">59%</span></div>
+      <p style="font-size:13.5px; color:var(--ink-2); margin-bottom:20px; max-width:80ch;">WoonBusters monitors 1,204 sources daily. Three findings from the public market report, each computed by models I built: the Bayesian huurcheck and a censoring-aware Kaplan-Meier survival model.</p>
+      <div class="panel3">
+
+        <div class="panel">
+          <h4>Rents above the legal max</h4>
+          <p class="psub">Share of listings priced above the WWS maximum. Student cities top the list, not Amsterdam. National average: 54.9%.</p>
+          <div class="citycompact">
+            <div class="cityrow"><span class="cname">Groningen</span><span class="ctrack"><i style="width:100%"></i></span><span class="cval">74%</span></div>
+            <div class="cityrow"><span class="cname">Nijmegen</span><span class="ctrack"><i style="width:98.6%"></i></span><span class="cval">73%</span></div>
+            <div class="cityrow"><span class="cname">Tilburg</span><span class="ctrack"><i style="width:95.9%"></i></span><span class="cval">71%</span></div>
+            <div class="cityrow"><span class="cname">Arnhem</span><span class="ctrack"><i style="width:93.2%"></i></span><span class="cval">69%</span></div>
+            <div class="cityrow"><span class="cname">Delft</span><span class="ctrack"><i style="width:90.5%"></i></span><span class="cval">67%</span></div>
+            <div class="cityrow dim"><span class="cname">Amsterdam</span><span class="ctrack"><i style="width:68.9%"></i></span><span class="cval">51%</span></div>
+            <div class="cityrow dim"><span class="cname">Haarlem</span><span class="ctrack"><i style="width:52.7%"></i></span><span class="cval">39%</span></div>
+            <div class="cityrow dim"><span class="cname">Amstelveen</span><span class="ctrack"><i style="width:41.9%"></i></span><span class="cval">31%</span></div>
+          </div>
+          <div class="chart-cap">Top 5 and bottom 3 of 20 cities, June 2026</div>
         </div>
-        <div class="citycol">
-          <div class="cityrow"><span class="cname">Leiden</span><span class="ctrack"><i style="width:78.4%"></i></span><span class="cval">58%</span></div>
-          <div class="cityrow"><span class="cname">Enschede</span><span class="ctrack"><i style="width:75.7%"></i></span><span class="cval">56%</span></div>
-          <div class="cityrow"><span class="cname">Leeuwarden</span><span class="ctrack"><i style="width:73%"></i></span><span class="cval">54%</span></div>
-          <div class="cityrow"><span class="cname">Breda</span><span class="ctrack"><i style="width:71.6%"></i></span><span class="cval">53%</span></div>
-          <div class="cityrow"><span class="cname">Amsterdam</span><span class="ctrack"><i style="width:68.9%"></i></span><span class="cval">51%</span></div>
-          <div class="cityrow"><span class="cname">Den Haag</span><span class="ctrack"><i style="width:67.6%"></i></span><span class="cval">50%</span></div>
-          <div class="cityrow"><span class="cname">Haarlemmermeer</span><span class="ctrack"><i style="width:64.9%"></i></span><span class="cval">48%</span></div>
-          <div class="cityrow"><span class="cname">Almere</span><span class="ctrack"><i style="width:62.2%"></i></span><span class="cval">46%</span></div>
-          <div class="cityrow"><span class="cname">Haarlem</span><span class="ctrack"><i style="width:52.7%"></i></span><span class="cval">39%</span></div>
-          <div class="cityrow"><span class="cname">Amstelveen</span><span class="ctrack"><i style="width:41.9%"></i></span><span class="cval">31%</span></div>
+
+        <div class="panel">
+          <h4>How fast homes disappear</h4>
+          <p class="psub">Kaplan-Meier survival of 19,667 listings, censoring-aware: a quarter gone within 6 days, half within 15.</p>
+          <svg viewBox="0 0 320 168" role="img" aria-label="Survival curve of rental listings: 25 percent gone in 6 days, 48 percent in 14 days, median 15 days, 21 percent censored">
+            <line x1="36" y1="140" x2="308" y2="140" stroke="rgba(36,38,31,0.18)" stroke-width="1"/>
+            <line x1="36" y1="20" x2="36" y2="140" stroke="rgba(36,38,31,0.18)" stroke-width="1"/>
+            <text x="36" y="154" font-size="9" fill="#96988c" font-family="Manrope" text-anchor="middle">0</text>
+            <text x="126" y="154" font-size="9" fill="#96988c" font-family="Manrope" text-anchor="middle">10 d</text>
+            <text x="216" y="154" font-size="9" fill="#96988c" font-family="Manrope" text-anchor="middle">20 d</text>
+            <text x="306" y="154" font-size="9" fill="#96988c" font-family="Manrope" text-anchor="middle">30 d</text>
+            <text x="30" y="24" font-size="9" fill="#96988c" font-family="Manrope" text-anchor="end">100%</text>
+            <text x="30" y="84" font-size="9" fill="#96988c" font-family="Manrope" text-anchor="end">50%</text>
+            <path d="M36,20 L54,24 68,32 82,44 90,50 104,62 118,74 126,78 140,86 152,92 166,99 184,106 202,111 220,115 244,119 270,122 306,124"
+                  fill="none" stroke="#55604f" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="90" cy="50" r="4" fill="#55604f"/>
+            <text x="97" y="46" font-size="9.5" font-weight="700" fill="#55604f" font-family="Manrope">25% gone, day 6</text>
+            <circle cx="171" cy="101" r="4" fill="#b0876a"/>
+            <text x="178" y="97" font-size="9.5" font-weight="700" fill="#b0876a" font-family="Manrope">median: 15 days</text>
+            <text x="306" y="118" font-size="9" font-weight="700" fill="#96988c" font-family="Manrope" text-anchor="end">21% censored</text>
+          </svg>
+          <div class="chart-cap">Rooms go faster (median 13 d) than self-contained homes (15 d)</div>
         </div>
+
+        <div class="panel">
+          <h4>Expensive homes wait</h4>
+          <p class="psub">Median days on market by asking price. The middle of the market moves fastest; above &euro;2,000 the pace halves.</p>
+          <div class="lolli">
+            <div class="lrow"><span class="lname">&lt; &euro;750</span><span class="ltrack"><i style="width:48.4%"></i><b style="left:48.4%">12.1</b></span></div>
+            <div class="lrow"><span class="lname">&euro;750-1000</span><span class="ltrack"><i style="width:52.8%"></i><b style="left:52.8%">13.2</b></span></div>
+            <div class="lrow"><span class="lname">&euro;1000-1228</span><span class="ltrack"><i style="width:48.4%"></i><b style="left:48.4%">12.1</b></span></div>
+            <div class="lrow"><span class="lname">&euro;1228-1500</span><span class="ltrack"><i style="width:52%"></i><b style="left:52%">13.0</b></span></div>
+            <div class="lrow"><span class="lname">&euro;1500-2000</span><span class="ltrack"><i style="width:60.4%"></i><b style="left:60.4%">15.1</b></span></div>
+            <div class="lrow"><span class="lname">&euro;2000-2750</span><span class="ltrack"><i style="width:84%"></i><b style="left:84%">21.0</b></span></div>
+            <div class="lrow"><span class="lname">&gt; &euro;2750</span><span class="ltrack"><i style="width:100%"></i><b style="left:100%">25.0</b></span></div>
+          </div>
+          <div class="chart-cap">Median time-to-rent in days, per price bucket</div>
+        </div>
+
       </div>
-      <div class="chart-cap">Source: <a href="https://woonbusters.nl/kenniscentrum/huur-boven-maximum-per-stad/" style="color:var(--sage-deep)">WoonBusters analysis, June 2026</a> — student cities top the list, not Amsterdam. The counter-intuitive finding is the point.</div>
+      <div class="chart-cap" style="margin-top:16px;">Sources: <a href="https://woonbusters.nl/marktrapport/" style="color:var(--sage-deep)">WoonBusters marktrapport</a> and <a href="https://woonbusters.nl/kenniscentrum/huur-boven-maximum-per-stad/" style="color:var(--sage-deep)">city analysis</a>, June 2026</div>
     </div>
   </section>
 
@@ -227,6 +276,8 @@
         <div class="meta">Production · WoonBusters</div>
         <p>Legal-maximum-rent estimation for 55,000+ listings per quarter, holdout-validated with calibrated confidence intervals against the official check.</p>
         <div class="tags"><span class="tag">Bayesian</span><span class="tag">WWS</span><span class="tag">PostgreSQL</span></div>
+        <a class="plink" href="https://woonbusters.nl/huurcheck">Try the huurcheck →</a>
+        <a class="plink" href="https://woonbusters.nl/marktrapport/" style="margin-left:14px;">Market report →</a>
       </div>
       <div class="card">
         <h3>Transfer Learning for Forecasting</h3>
@@ -264,17 +315,17 @@
         <h3>Experience</h3>
         <div class="tl-item hl">
           <h4>Data Analist · Belastingdienst</h4>
-          <div class="when">Feb 2026 — present</div>
+          <div class="when">Feb 2026 – present</div>
           <p>Case-flow forecasting, deadline-risk prediction and work-allocation optimization for team leaders and the regiekamer.</p>
         </div>
         <div class="tl-item hl">
           <h4>Founder · WoonBusters</h4>
-          <div class="when">Oct 2025 — present</div>
+          <div class="when">Oct 2025 – present</div>
           <p>National rental-market data platform: 1,000+ sources daily, Bayesian legal-rent model, public market report, B2B API.</p>
         </div>
         <div class="tl-item">
           <h4>Data Scientist R&amp;D · INNAX</h4>
-          <div class="when">Feb 2024 — Feb 2026</div>
+          <div class="when">Feb 2024 – Feb 2026</div>
           <p>Energy forecasting and optimization system adopted by the Province of Utrecht for infrastructure planning.</p>
         </div>
         <div class="tl-item">
@@ -285,7 +336,7 @@
       <div class="tl">
         <h3>Education</h3>
         <div class="tl-item hl">
-          <h4>MSc Data Science — cum laude</h4>
+          <h4>MSc Data Science, cum laude</h4>
           <div class="when">Radboud University</div>
           <p>Thesis: Transfer Learning for Limited-Data Forecasting (8). Statistical ML (8.5), Machine Learning (9), Law &amp; Technology (10).</p>
         </div>
@@ -296,7 +347,7 @@
         <div class="tl-item">
           <h4>BSc Mathematics</h4>
           <div class="when">Radboud University · minor Physical Chemistry</div>
-          <p>Thesis: Three-Body Problem (8) — numerical methods, stability and error analysis.</p>
+          <p>Thesis: Three-Body Problem (8): numerical methods, stability and error analysis.</p>
         </div>
       </div>
     </div>
@@ -318,11 +369,11 @@
     <h2><small>About</small>Beyond the models</h2>
     <div class="about-band">
       <div class="card">
-        <p>What I love most about data science? <strong>It can advance any topic.</strong> My background spans mathematics, physical chemistry and computer science, and I've applied it to cancer prediction, grid congestion, nutrition, housing transparency and media bias. Real impact comes from combining rigorous methodology with practical application — the Province of Utrecht adopting my forecasting work for policy showed me what well-designed ML can actually do.</p>
+        <p>What I love most about data science? <strong>It can advance any topic.</strong> My background spans mathematics, physical chemistry and computer science, and I've applied it to cancer prediction, grid congestion, nutrition, housing transparency and media bias. Real impact comes from combining rigorous methodology with practical application. The Province of Utrecht adopting my forecasting work for policy showed me what well-designed ML can actually do.</p>
         <p>I work well independently but thrive in small, focused teams, and I'm comfortable translating complex work for provinces, entrepreneurs and clinicians alike.</p>
       </div>
       <div class="card">
-        <p><strong>Off the clock:</strong> cooking and baking (food science meets creativity), the gym, good books, 3D printing, painting, and metal music. Product builder at heart — I love taking ideas from concept to reality.</p>
+        <p><strong>Off the clock:</strong> cooking and baking (food science meets creativity), the gym, good books, 3D printing, painting, and metal music. Product builder at heart: I love taking ideas from concept to reality.</p>
       </div>
     </div>
   </section>
