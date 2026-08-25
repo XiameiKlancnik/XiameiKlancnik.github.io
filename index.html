@@ -80,22 +80,19 @@
   .card.accent .tag { color: #e6eadf; background: rgba(255,255,255,0.12); }
   .card .plink { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 800; color: var(--sage-deep); text-decoration: none; border-bottom: 2px solid var(--clay); }
 
-  .minichart { margin-top: 16px; background: rgba(36,38,31,0.025); border-radius: 12px; padding: 12px 12px 8px; }
-  .card.accent .minichart { background: rgba(255,255,255,0.07); }
-  .minichart svg { display: block; width: 100%; height: auto; }
-  .chart-cap { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-top: 6px; }
-  .card.accent .chart-cap { color: #9aa591; }
+  .chart-cap { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: var(--ink-3); margin-top: 14px; }
+  .citychart { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 40px; }
+  .cityrow { display: grid; grid-template-columns: 110px 1fr 40px; align-items: center; gap: 10px; padding: 3px 0; }
+  .cname { font-size: 12.5px; font-weight: 700; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ctrack { display: block; height: 9px; background: rgba(36,38,31,0.05); border-radius: 5px; overflow: hidden; }
+  .ctrack i { display: block; height: 100%; background: var(--sage); border-radius: 5px; }
+  .citycol:first-child .cityrow:nth-child(-n+3) .ctrack i { background: var(--sage-deep); }
+  .cval { font-size: 12.5px; font-weight: 800; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
 
   .bigchart { background: var(--card); border-radius: 24px; box-shadow: var(--shadow-sm); padding: 28px 32px 20px; }
   .bigchart-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
   .bigchart-head h3 { font-family: "DM Serif Display", serif; font-size: 21px; font-weight: 400; }
-  .bigchart-head .legend { display: flex; gap: 18px; font-size: 12px; font-weight: 700; color: var(--ink-2); }
-  .legend i { display: inline-block; width: 18px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
-  .legend .l-forecast i { background: var(--sage-deep); }
-  .legend .l-band i { background: var(--sage-soft); height: 10px; border-radius: 3px; }
-  .legend .l-real i { background: var(--clay); }
-  .bigchart svg { display: block; width: 100%; height: auto; }
-  .bigchart .chart-cap { margin-top: 8px; }
+  .bigchart .chart-cap { margin-top: 14px; }
 
   .timeline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
   .tl { background: var(--card); border-radius: 20px; box-shadow: var(--shadow-sm); padding: 26px 28px; }
@@ -125,6 +122,7 @@
     .portrait { max-width: 340px; }
     .grid-2, .grid-3, .timeline-grid, .about-band { grid-template-columns: 1fr; }
     .skill-band { grid-template-columns: 1fr 1fr; }
+    .citychart { grid-template-columns: 1fr; }
     h1 { font-size: 40px; }
     .chip-1 { left: 10px; } .chip-2 { right: 10px; }
   }
@@ -167,41 +165,12 @@
         <h3>Data Analist · Belastingdienst</h3>
         <div class="meta">Feb 2026 — present</div>
         <p>Work-allocation tool for team leaders and the regiekamer: forecasting case inflow, predicting legal-deadline breaches, and distributing work with linear optimization. Plus Teradata → DB2 migration and SAS reporting.</p>
-        <div class="minichart">
-          <svg viewBox="0 0 300 78" role="img" aria-label="Illustration: optimizer distributing cases across teams">
-            <text x="0" y="12" font-size="9" fill="#9aa591" font-family="Manrope">Team A</text>
-            <rect x="52" y="5" width="170" height="8" rx="4" fill="rgba(255,255,255,0.28)"/>
-            <text x="0" y="30" font-size="9" fill="#9aa591" font-family="Manrope">Team B</text>
-            <rect x="52" y="23" width="128" height="8" rx="4" fill="rgba(255,255,255,0.28)"/>
-            <text x="0" y="48" font-size="9" fill="#9aa591" font-family="Manrope">Team C</text>
-            <rect x="52" y="41" width="196" height="8" rx="4" fill="rgba(255,255,255,0.28)"/>
-            <text x="0" y="66" font-size="9" fill="#9aa591" font-family="Manrope">Team D</text>
-            <rect x="52" y="59" width="88" height="8" rx="4" fill="rgba(255,255,255,0.28)"/>
-            <rect x="222" y="5" width="34" height="8" rx="4" fill="#c9a184"/>
-            <rect x="180" y="23" width="30" height="8" rx="4" fill="#c9a184"/>
-            <rect x="140" y="59" width="26" height="8" rx="4" fill="#c9a184"/>
-            <line x1="266" y1="2" x2="266" y2="72" stroke="#c9a184" stroke-width="1.5" stroke-dasharray="3 3"/>
-            <text x="272" y="40" font-size="8.5" fill="#c9a184" font-family="Manrope" transform="rotate(90 272 40)" text-anchor="middle">deadline</text>
-          </svg>
-          <div class="chart-cap">Optimizer view — deadline-risk cases (clay) reassigned first</div>
-        </div>
         <div class="tags"><span class="tag">Python</span><span class="tag">Linear optimization</span><span class="tag">SAS</span><span class="tag">DB2</span></div>
       </div>
       <div class="card">
         <h3>Founder · WoonBusters</h3>
         <div class="meta">Oct 2025 — present · <a href="https://woonbusters.nl" style="color:var(--sage-deep)">woonbusters.nl</a></div>
         <p>The full advertised Dutch rental market, monitored daily. Bayesian legal-rent model validated against the Huurcommissie's check, a public market report, and a B2B data API. Solo-built, solo-operated.</p>
-        <div class="minichart">
-          <svg viewBox="0 0 300 78" role="img" aria-label="Illustration: posterior distribution of the legal maximum rent">
-            <line x1="10" y1="66" x2="290" y2="66" stroke="rgba(36,38,31,0.15)" stroke-width="1"/>
-            <path d="M14,65 C60,64 88,60 108,48 C128,36 138,14 158,12 C178,14 190,38 212,52 C232,62 260,65 286,65 L286,66 L14,66 Z" fill="rgba(125,138,118,0.22)"/>
-            <path d="M14,65 C60,64 88,60 108,48 C128,36 138,14 158,12 C178,14 190,38 212,52 C232,62 260,65 286,65" fill="none" stroke="#55604f" stroke-width="2"/>
-            <line x1="158" y1="8" x2="158" y2="66" stroke="#b0876a" stroke-width="1.5" stroke-dasharray="3 3"/>
-            <text x="163" y="16" font-size="9" fill="#b0876a" font-family="Manrope" font-weight="700">legal max</text>
-            <path d="M108,48 C128,36 138,14 158,12 C178,14 190,38 212,52 L212,66 L108,66 Z" fill="rgba(176,135,106,0.20)"/>
-          </svg>
-          <div class="chart-cap">Bayesian huurcheck — posterior per dwelling, calibrated interval</div>
-        </div>
         <div class="tags"><span class="tag">Bayesian</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Playwright</span></div>
       </div>
     </div>
@@ -210,36 +179,37 @@
   <section>
     <div class="bigchart">
       <div class="bigchart-head">
-        <h3>Year-ahead energy forecasting, 15-minute resolution</h3>
-        <div class="legend">
-          <span class="l-forecast"><i></i>forecast</span>
-          <span class="l-band"><i></i>uncertainty band</span>
-          <span class="l-real"><i></i>realized</span>
+        <h3>Rents above the legal maximum — my own data</h3>
+        <span class="tag" style="background:var(--clay-soft); color:var(--clay)">National average: 54.9%</span>
+      </div>
+      <p style="font-size:13.5px; color:var(--ink-2); margin-bottom:18px; max-width:74ch;">Share of advertised rental listings priced above the WWS legal maximum, per city. Every number comes from my own platform: WoonBusters monitors 1,000+ sources daily and scores each dwelling with the Bayesian huurcheck.</p>
+      <div class="citychart">
+        <div class="citycol">
+          <div class="cityrow"><span class="cname">Groningen</span><span class="ctrack"><i style="width:100%"></i></span><span class="cval">74%</span></div>
+          <div class="cityrow"><span class="cname">Nijmegen</span><span class="ctrack"><i style="width:98.6%"></i></span><span class="cval">73%</span></div>
+          <div class="cityrow"><span class="cname">Tilburg</span><span class="ctrack"><i style="width:95.9%"></i></span><span class="cval">71%</span></div>
+          <div class="cityrow"><span class="cname">Arnhem</span><span class="ctrack"><i style="width:93.2%"></i></span><span class="cval">69%</span></div>
+          <div class="cityrow"><span class="cname">Delft</span><span class="ctrack"><i style="width:90.5%"></i></span><span class="cval">67%</span></div>
+          <div class="cityrow"><span class="cname">Maastricht</span><span class="ctrack"><i style="width:83.8%"></i></span><span class="cval">62%</span></div>
+          <div class="cityrow"><span class="cname">Rotterdam</span><span class="ctrack"><i style="width:82.4%"></i></span><span class="cval">61%</span></div>
+          <div class="cityrow"><span class="cname">Den Bosch</span><span class="ctrack"><i style="width:82.4%"></i></span><span class="cval">61%</span></div>
+          <div class="cityrow"><span class="cname">Utrecht</span><span class="ctrack"><i style="width:79.7%"></i></span><span class="cval">59%</span></div>
+          <div class="cityrow"><span class="cname">Eindhoven</span><span class="ctrack"><i style="width:79.7%"></i></span><span class="cval">59%</span></div>
+        </div>
+        <div class="citycol">
+          <div class="cityrow"><span class="cname">Leiden</span><span class="ctrack"><i style="width:78.4%"></i></span><span class="cval">58%</span></div>
+          <div class="cityrow"><span class="cname">Enschede</span><span class="ctrack"><i style="width:75.7%"></i></span><span class="cval">56%</span></div>
+          <div class="cityrow"><span class="cname">Leeuwarden</span><span class="ctrack"><i style="width:73%"></i></span><span class="cval">54%</span></div>
+          <div class="cityrow"><span class="cname">Breda</span><span class="ctrack"><i style="width:71.6%"></i></span><span class="cval">53%</span></div>
+          <div class="cityrow"><span class="cname">Amsterdam</span><span class="ctrack"><i style="width:68.9%"></i></span><span class="cval">51%</span></div>
+          <div class="cityrow"><span class="cname">Den Haag</span><span class="ctrack"><i style="width:67.6%"></i></span><span class="cval">50%</span></div>
+          <div class="cityrow"><span class="cname">Haarlemmermeer</span><span class="ctrack"><i style="width:64.9%"></i></span><span class="cval">48%</span></div>
+          <div class="cityrow"><span class="cname">Almere</span><span class="ctrack"><i style="width:62.2%"></i></span><span class="cval">46%</span></div>
+          <div class="cityrow"><span class="cname">Haarlem</span><span class="ctrack"><i style="width:52.7%"></i></span><span class="cval">39%</span></div>
+          <div class="cityrow"><span class="cname">Amstelveen</span><span class="ctrack"><i style="width:41.9%"></i></span><span class="cval">31%</span></div>
         </div>
       </div>
-      <svg viewBox="0 0 1020 190" role="img" aria-label="Illustration: energy demand forecast with uncertainty band versus realized demand">
-        <line x1="30" y1="40" x2="1000" y2="40" stroke="rgba(36,38,31,0.06)" stroke-width="1"/>
-        <line x1="30" y1="85" x2="1000" y2="85" stroke="rgba(36,38,31,0.06)" stroke-width="1"/>
-        <line x1="30" y1="130" x2="1000" y2="130" stroke="rgba(36,38,31,0.06)" stroke-width="1"/>
-        <line x1="30" y1="168" x2="1000" y2="168" stroke="rgba(36,38,31,0.14)" stroke-width="1"/>
-        <text x="30" y="184" font-size="10" fill="#96988c" font-family="Manrope">winter</text>
-        <text x="270" y="184" font-size="10" fill="#96988c" font-family="Manrope">spring</text>
-        <text x="510" y="184" font-size="10" fill="#96988c" font-family="Manrope">summer</text>
-        <text x="750" y="184" font-size="10" fill="#96988c" font-family="Manrope">autumn</text>
-        <text x="975" y="184" font-size="10" fill="#96988c" font-family="Manrope">winter</text>
-        <path d="M30,52 C120,44 200,62 290,84 C380,106 440,124 510,130 C580,136 640,122 730,98 C820,74 920,52 1000,44
-                 L1000,76 C920,84 820,102 730,122 C640,142 580,152 510,150 C440,148 380,132 290,112 C200,92 120,74 30,78 Z"
-              fill="rgba(125,138,118,0.18)"/>
-        <path d="M30,65 C120,59 200,77 290,98 C380,119 440,138 510,140 C580,142 640,132 730,110 C820,88 920,63 1000,60"
-              fill="none" stroke="#55604f" stroke-width="2.5"/>
-        <path d="M30,70 C90,60 150,74 230,92 C310,112 360,128 430,136 C470,140 500,146 540,138 C620,126 680,124 760,104 C850,82 930,70 1000,66"
-              fill="none" stroke="#b0876a" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round"/>
-        <circle cx="510" cy="140" r="4" fill="#55604f"/>
-        <text x="510" y="122" font-size="10.5" font-weight="700" fill="#55604f" font-family="Manrope" text-anchor="middle">solar dip</text>
-        <circle cx="1000" cy="60" r="4" fill="#55604f"/>
-        <text x="988" y="46" font-size="10.5" font-weight="700" fill="#55604f" font-family="Manrope" text-anchor="end">peak load →  battery sizing</text>
-      </svg>
-      <div class="chart-cap">Illustrative — the shape of the INNAX pipeline: growth, weather and price signals in; hub scenarios and battery dimensions out. Adopted by the Province of Utrecht.</div>
+      <div class="chart-cap">Source: <a href="https://woonbusters.nl/kenniscentrum/huur-boven-maximum-per-stad/" style="color:var(--sage-deep)">WoonBusters analysis, June 2026</a> — student cities top the list, not Amsterdam. The counter-intuitive finding is the point.</div>
     </div>
   </section>
 
@@ -262,16 +232,7 @@
         <h3>Transfer Learning for Forecasting</h3>
         <div class="meta">MSc thesis · grade 8</div>
         <p>Transfer learning consistently beats classical baselines and from-scratch deep models in limited-data regimes.</p>
-        <div class="minichart">
-          <svg viewBox="0 0 300 70" role="img" aria-label="Illustration: transfer learning converges faster and lower than training from scratch">
-            <line x1="10" y1="60" x2="290" y2="60" stroke="rgba(36,38,31,0.15)" stroke-width="1"/>
-            <path d="M14,12 C60,40 110,50 180,54 C230,56 270,57 288,57" fill="none" stroke="#55604f" stroke-width="2"/>
-            <path d="M14,8 C80,20 150,32 210,38 C250,42 275,44 288,45" fill="none" stroke="#96988c" stroke-width="2" stroke-dasharray="4 4"/>
-            <text x="286" y="53" font-size="9" fill="#55604f" font-family="Manrope" font-weight="700" text-anchor="end">transfer</text>
-            <text x="286" y="38" font-size="9" fill="#96988c" font-family="Manrope" font-weight="700" text-anchor="end">from scratch</text>
-          </svg>
-          <div class="chart-cap">Error vs training data — the gap is the thesis</div>
-        </div>
+        <div class="tags"><span class="tag">Transformers</span><span class="tag">LSTM</span><span class="tag">LightGBM</span></div>
       </div>
       <div class="card">
         <h3>Ingestigate</h3>
