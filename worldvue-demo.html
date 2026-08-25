@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldVue AI Demo - Xiamei Klancnik</title>
+    <link rel="stylesheet" href="theme-tokens.css">
+    <link rel="stylesheet" href="base-polish.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .demo-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        .demo-content {
+            padding: 4rem 0;
+        }
+
+        .demo-section {
+            background-color: var(--card-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        .demo-section h2 {
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .demo-section h3 {
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .demo-section p, .demo-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .demo-section ul {
+            margin-left: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, var(--panel) 0%, color-mix(in lab, var(--panel) 95%, var(--accent-primary) 5%) 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid color-mix(in lab, var(--accent-primary) 20%, transparent);
+        }
+
+        .feature-card h4 {
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-tertiary);
+            font-size: 0.95rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background-color: var(--bg-tertiary);
+            color: var(--accent-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--accent-primary);
+        }
+
+        .screenshot-placeholder {
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+            border: 2px dashed var(--border-color);
+            border-radius: 12px;
+            padding: 4rem;
+            text-align: center;
+            color: var(--text-tertiary);
+            margin: 2rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-secondary);
+            transform: translateX(-5px);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--panel) 0%, color-mix(in lab, var(--panel) 90%, var(--accent-primary) 10%) 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-primary);
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .use-case {
+            background-color: var(--bg-tertiary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .use-case h4 {
+            color: var(--accent-primary);
+            margin-bottom: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">XK</div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="demo-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+            <h1 class="hero-title" style="font-size: 3rem;">WorldVue AI</h1>
+            <p class="hero-description">Global News Frame Analysis & Bias Detection</p>
+        </div>
+    </section>
+
+    <section class="demo-content">
+        <div class="container">
+            <div class="demo-section">
+                <h2>Project Overview</h2>
+                <p>WorldVue is a political bias detection system that analyzes how different countries and media sources frame news stories. Using CORE24 (12-dimension political bias detection) and Entity Framing analysis, the platform reveals ideological positioning across economic and social/authority dimensions.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Core Innovation:</strong> CORE24 framework provides multidimensional political bias analysis across 12 dimensions organized into 4 quadrants (Economic Left/Right, Social Libertarian/Authoritarian), going far beyond simple left-right spectrum analysis.</p>
+                </div>
+
+                <h3>Core Systems</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>CORE24 Bias Detection</h4>
+                        <p>12-dimension political bias analysis across economic (pro_market, pro_worker, elite_status) and social/authority (democratic_norms, inclusive, social_values) axes</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Entity Framing Analysis</h4>
+                        <p>12-dimension analysis of how entities (politicians, organizations) are portrayed across economic, social, and meta dimensions</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Interactive World Map</h4>
+                        <p>GeoJSON-based visualization showing country-level bias patterns with real-time filtering by topic and entity</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Multilingual Search</h4>
+                        <p>XLM-RoBERTa powered search across articles from multiple countries and languages</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>RESTful API</h4>
+                        <p>Flask backend with endpoints for topic filtering, entity analysis, and bias detection</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Real-Time Analytics</h4>
+                        <p>Trending topics detection and time-windowed analysis with caching for performance</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Technical Implementation</h2>
+
+                <h3>Technology Stack</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">XLM-RoBERTa</span>
+                    <span class="tech-badge">OpenAI API</span>
+                    <span class="tech-badge">Supabase</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">GeoJSON</span>
+                    <span class="tech-badge">PyTorch</span>
+                </div>
+
+                <h3>CORE24 Framework</h3>
+                <p>The CORE24 system analyzes political bias across 12 dimensions organized into 4 ideological quadrants:</p>
+                <ul>
+                    <li><strong>Economic Left:</strong> pro_market (negative), pro_worker (positive), elite_status (negative)</li>
+                    <li><strong>Economic Right:</strong> pro_market (positive), pro_worker (negative), elite_status (positive)</li>
+                    <li><strong>Social Libertarian:</strong> democratic_norms, inclusive, social_values (progressive)</li>
+                    <li><strong>Social Authoritarian:</strong> democratic_norms (weak), inclusive (low), social_values (traditional)</li>
+                </ul>
+
+                <h3>Entity Framing System</h3>
+                <p>XLM-RoBERTa based multi-label classifier analyzing entity portrayal across 12 dimensions:</p>
+                <ul>
+                    <li><strong>Economic Dimensions:</strong> pro_market, pro_worker, elite_status, economic_competence</li>
+                    <li><strong>Social/Authority Dimensions:</strong> democratic_norms, inclusive, social_values, moral_character</li>
+                    <li><strong>Meta Dimensions:</strong> competence, victim_aggressor, insider_outsider, threat_defender</li>
+                    <li><strong>Output:</strong> POSITIVE/NEGATIVE/NEUTRAL predictions with confidence scores, net score, and aggregate metrics</li>
+                </ul>
+
+                <h3>Architecture Overview</h3>
+                <ul>
+                    <li><strong>Backend:</strong> Flask server with RESTful API (topic filtering, entity analysis, multilingual search)</li>
+                    <li><strong>Database:</strong> Supabase PostgreSQL with entity_framing table, RLS policies, and optimized indexes</li>
+                    <li><strong>CORE24 Judge:</strong> LLM-based bias detection using OpenAI API with rate limiting and cost control</li>
+                    <li><strong>Entity Framing Predictor:</strong> Fine-tuned XLM-RoBERTa model for 12-dimension classification</li>
+                    <li><strong>CLI System:</strong> Command-line tools for batch judging and entity framing analysis</li>
+                    <li><strong>Frontend:</strong> Interactive world map with GeoJSON visualization, topic/entity filtering, and article cards</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>Use Cases & Applications</h2>
+                
+                <div class="use-case-grid">
+                    <div class="use-case">
+                        <h4>Media Literacy</h4>
+                        <p>Help readers understand how the same story is told differently across countries and identify potential bias in reporting.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>Research & Academia</h4>
+                        <p>Provide researchers with tools to study global media narratives and information ecosystems.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>Business Intelligence</h4>
+                        <p>Help organizations understand how they're covered in different markets and regions.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>Policy Analysis</h4>
+                        <p>Assist policymakers in understanding international perspectives on global events.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>Journalism</h4>
+                        <p>Support journalists in identifying angles and gaps in their coverage compared to international sources.</p>
+                    </div>
+                    <div class="use-case">
+                        <h4>Fact-Checking</h4>
+                        <p>Aid fact-checkers by highlighting narrative inconsistencies across sources.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Development Journey</h2>
+                <p>WorldVue represents end-to-end system design and implementation, from theoretical framework to production deployment:</p>
+
+                <h3>Key Development Phases</h3>
+                <ul>
+                    <li><strong>Framework Design:</strong> Developed CORE24 12-dimension political bias framework with balanced signal bank</li>
+                    <li><strong>Model Training:</strong> Fine-tuned XLM-RoBERTa for 12-dimension entity framing classification (multilingual)</li>
+                    <li><strong>Backend Architecture:</strong> Built Flask RESTful API with Supabase PostgreSQL integration</li>
+                    <li><strong>Database Schema:</strong> Designed entity_framing table with RLS policies and optimized indexes</li>
+                    <li><strong>CLI System:</strong> Created command-line tools for batch processing and analysis workflows</li>
+                    <li><strong>Frontend Visualization:</strong> Implemented interactive world map with GeoJSON country-level bias visualization</li>
+                    <li><strong>Production Deployment:</strong> Clean production system with caching, rate limiting, and cost control</li>
+                </ul>
+
+                <h3>Technical Challenges & Solutions</h3>
+                <ul>
+                    <li><strong>Challenge:</strong> Multidimensional bias beyond simple left-right spectrum
+                        <br><strong>Solution:</strong> CORE24 framework with 4 quadrants (Economic Left/Right, Social Libertarian/Authoritarian)</li>
+                    <li><strong>Challenge:</strong> Entity framing across multiple ideological dimensions
+                        <br><strong>Solution:</strong> Fine-tuned XLM-RoBERTa for 12-dimension multi-label classification with confidence scores</li>
+                    <li><strong>Challenge:</strong> LLM API costs for large-scale bias detection
+                        <br><strong>Solution:</strong> Parallel processing with rate limiting, budget tracking, and caching strategies</li>
+                    <li><strong>Challenge:</strong> Real-time visualization of complex bias patterns
+                        <br><strong>Solution:</strong> GeoJSON world map with time-windowed queries and optimized database indexes</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>System Capabilities</h2>
+
+                <h3>API Endpoints</h3>
+                <ul>
+                    <li><strong>GET /api/topic/&lt;topic&gt;:</strong> Retrieve articles filtered by topic with bias scores</li>
+                    <li><strong>GET /api/country/&lt;country&gt;:</strong> Get country-specific articles and aggregate bias metrics</li>
+                    <li><strong>GET /api/trending:</strong> Discover trending topics globally with article counts</li>
+                    <li><strong>POST /api/entity-framing/analyze:</strong> Analyze entity framing for specific article/entity pairs</li>
+                    <li><strong>GET /api/entity-framing/&lt;entity&gt;:</strong> Retrieve all framing results for a given entity</li>
+                    <li><strong>GET /api/search:</strong> Multilingual article search with XLM-RoBERTa embeddings</li>
+                </ul>
+
+                <h3>CLI Commands</h3>
+                <ul>
+                    <li><strong>worldvue judge:</strong> Batch CORE24 bias detection with parallel processing and rate limiting</li>
+                    <li><strong>worldvue entity-framing analyze:</strong> Entity framing analysis for articles with entity extraction</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>Production Features:</strong> Caching layer (15-min TTL), time-windowed queries (7-day default), cost control system, RLS security policies, optimized database indexes, and parallel processing with worker pools.</p>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Technical Highlights</h2>
+                <p>WorldVue showcases advanced capabilities in:</p>
+                <ul>
+                    <li><strong>Political Science Framework:</strong> CORE24 multidimensional bias model with theoretical grounding</li>
+                    <li><strong>Transformer Fine-tuning:</strong> XLM-RoBERTa multi-label classification for 12 framing dimensions</li>
+                    <li><strong>LLM Integration:</strong> OpenAI API usage with parallel processing, budget tracking, and rate limiting</li>
+                    <li><strong>Database Design:</strong> PostgreSQL schema with RLS policies, indexes, and unique constraints</li>
+                    <li><strong>RESTful API Architecture:</strong> Flask backend with caching, error handling, and time-windowed queries</li>
+                    <li><strong>GeoJSON Visualization:</strong> Interactive world map with real-time filtering and bias overlays</li>
+                    <li><strong>CLI System Design:</strong> Modular command structure for batch processing workflows</li>
+                    <li><strong>Production Deployment:</strong> Environment configuration, security policies, and performance optimization</li>
+                </ul>
+
+                <p style="margin-top: 2rem;">This project demonstrates end-to-end system development from theoretical framework design through model training, backend architecture, database schema, API implementation, and production deployment.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html#projects" class="btn btn-primary">← Back to Projects</a>
+                <a href="index.html#contact" class="btn btn-secondary" style="margin-left: 1rem;">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Xiamei Klancnik. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe demo sections
+        document.querySelectorAll('.demo-section, .feature-card, .use-case').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

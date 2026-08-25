@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingestigate Demo - Xiamei Klancnik</title>
+    <link rel="stylesheet" href="theme-tokens.css">
+    <link rel="stylesheet" href="base-polish.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .demo-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        .demo-content {
+            padding: 4rem 0;
+        }
+
+        .demo-section {
+            background-color: var(--card-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        .demo-section h2 {
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .demo-section h3 {
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .demo-section p, .demo-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .demo-section ul {
+            margin-left: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, var(--panel) 0%, color-mix(in lab, var(--panel) 95%, var(--accent-primary) 5%) 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid color-mix(in lab, var(--accent-primary) 20%, transparent);
+        }
+
+        .feature-card h4 {
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-tertiary);
+            font-size: 0.95rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background-color: var(--bg-tertiary);
+            color: var(--accent-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--accent-primary);
+        }
+
+        .screenshot-placeholder {
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+            border: 2px dashed var(--border-color);
+            border-radius: 12px;
+            padding: 4rem;
+            text-align: center;
+            color: var(--text-tertiary);
+            margin: 2rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-secondary);
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">XK</div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="demo-hero">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">← Back to Projects</a>
+            <div style="display: flex; align-items: center; gap: 1.5rem;">
+                <img src="logo.png" alt="Ingestigate logo" style="width: 80px; height: 80px; border-radius: 16px;">
+                <div>
+                    <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 0.5rem;">Ingestigate</h1>
+                    <p class="hero-description" style="margin-bottom: 0;">LLM-Driven Food Intelligence App</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-content">
+        <div class="container">
+            <div class="demo-section">
+                <h2>App Demo</h2>
+                <div style="margin: 2rem 0;">
+                    <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                        <div style="flex: 0 1 400px;">
+                            <video controls muted style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 10px 30px rgba(57, 255, 20, 0.2);">
+                                <source src="assets/log_from_text.mov" type="video/quicktime">
+                                <source src="assets/log_from_text.mov" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p style="text-align: center; color: var(--text-secondary); font-size: 0.95rem; margin-top: 1rem; font-weight: 600;">Text-to-Meal Parsing</p>
+                            <p style="text-align: center; color: var(--text-tertiary); font-size: 0.85rem; margin-top: 0.5rem;">Simply describe your meal in natural language and AI automatically logs it with accurate portions and nutritional data</p>
+                        </div>
+                        <div style="flex: 0 1 400px;">
+                            <video controls muted style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 10px 30px rgba(57, 255, 20, 0.2);">
+                                <source src="assets/pillars.mov" type="video/quicktime">
+                                <source src="assets/pillars.mov" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p style="text-align: center; color: var(--text-secondary); font-size: 0.95rem; margin-top: 1rem; font-weight: 600;">Six Health Anchors Analytics</p>
+                            <p style="text-align: center; color: var(--text-tertiary); font-size: 0.85rem; margin-top: 0.5rem;">Track your progress across all six health anchors with detailed daily scorecards and visual feedback</p>
+                        </div>
+                        <div style="flex: 0 1 400px;">
+                            <video controls muted style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 10px 30px rgba(57, 255, 20, 0.2);">
+                                <source src="assets/url.mov" type="video/quicktime">
+                                <source src="assets/url.mov" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p style="text-align: center; color: var(--text-secondary); font-size: 0.95rem; margin-top: 1rem; font-weight: 600;">Recipe Deep Linking</p>
+                            <p style="text-align: center; color: var(--text-tertiary); font-size: 0.85rem; margin-top: 0.5rem;">Share meals between users via deep links - import complete recipes with a single tap</p>
+                        </div>
+                        <div style="flex: 0 1 400px;">
+                            <video controls muted style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 10px 30px rgba(57, 255, 20, 0.2);">
+                                <source src="assets/smartmeal.mov" type="video/quicktime">
+                                <source src="assets/smartmeal.mov" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p style="text-align: center; color: var(--text-secondary); font-size: 0.95rem; margin-top: 1rem; font-weight: 600;">AI Smart Meal Generator</p>
+                            <p style="text-align: center; color: var(--text-tertiary); font-size: 0.85rem; margin-top: 0.5rem;">Generate complete meals based on your chosen cuisine and centered around specific foods while respecting all health anchors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Project Overview</h2>
+                <p>Ingestigate is a comprehensive AI-powered nutrition tracking application that combines traditional food diary functionality with cutting-edge AI features to deliver truly smart nutrition insights. Built entirely from scratch in Flutter, it features a sophisticated health analytics system, personalized AI coaching, and innovative food discovery tools.</p>
+
+                <h3>Six Health Anchors System</h3>
+                <p>At the core of Ingestigate is a unique nutritional framework tracking six fundamental health anchors:</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Protein</h4>
+                        <p>Adequate protein intake tracking</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Fiber & Plant Diversity</h4>
+                        <p>Plant-based nutrition and fiber analysis</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Fat Quality & Adequacy</h4>
+                        <p>Omega-3, saturated fat, and fat quality metrics</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Micronutrients</h4>
+                        <p>Comprehensive vitamin and mineral tracking</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Whole Foods Foundation</h4>
+                        <p>Processing level and food quality analysis</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Gut Rest</h4>
+                        <p>Meal timing and digestive health</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Core Features</h2>
+
+                <h3>Smart Food Logging</h3>
+                <ul>
+                    <li><strong>Multiple Input Methods:</strong> Manual search, barcode scanner, AI photo analysis, text-to-meal parsing, and recipe sharing via deep links</li>
+                    <li><strong>Intelligent Meal Creation:</strong> Create custom meals and recipes, share with other users, import shared meals</li>
+                    <li><strong>AI Smart Meal Generator:</strong> Creates complete meals based on your chosen cuisine, centered around specific foods and macros, while obeying all health pillars</li>
+                    <li><strong>Smart Serving Suggestions:</strong> AI-powered portion size recommendations</li>
+                </ul>
+
+                <h3>Coach</h3>
+                <ul>
+                    <li><strong>Intraday Feedback:</strong> Real-time guidance throughout the day based on your eating patterns</li>
+                    <li><strong>Meal-by-Meal Analysis:</strong> Instant personalized feedback on each logged meal</li>
+                    <li><strong>Daily & Weekly Summaries:</strong> Comprehensive nutrition reports and insights</li>
+                    <li><strong>Fully Personalized:</strong> All feedback respects your dietary preferences, allergies, and intolerances</li>
+                </ul>
+
+                <h3>Food Discovery Tools</h3>
+                <ul>
+                    <li><strong>Food Sage:</strong> Personalized food recommendations ranked by your current nutritional needs</li>
+                    <li><strong>Food Oracle:</strong> Advanced search filtering foods by multiple nutrients simultaneously</li>
+                    <li><strong>Dietary Filtering:</strong> Support for vegan, keto, paleo, and custom dietary preferences</li>
+                </ul>
+
+                <h3>Health Analytics & Reporting</h3>
+                <ul>
+                    <li><strong>Daily Scorecard:</strong> Performance tracking across all six health anchors</li>
+                    <li><strong>Weekly Trends:</strong> Visual charts and treemap visualization of progress</li>
+                    <li><strong>Intolerance Detection:</strong> AI-powered food-symptom pattern analysis</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>Technical Implementation</h2>
+
+                <h3>Technology Stack</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Flutter 3.7.2+</span>
+                    <span class="tech-badge">Dart</span>
+                    <span class="tech-badge">Supabase</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">OpenAI GPT</span>
+                    <span class="tech-badge">TypeScript</span>
+                    <span class="tech-badge">Edge Functions</span>
+                </div>
+
+                <h3>Architecture Highlights</h3>
+                <ul>
+                    <li><strong>Frontend:</strong> Flutter cross-platform app (iOS, Android, Desktop) with Provider state management</li>
+                    <li><strong>Backend:</strong> Supabase with PostgreSQL database and real-time subscriptions</li>
+                    <li><strong>AI Integration:</strong> 9 custom Edge Functions for AI processing - meal parsing, photo analysis, coaching, intolerance detection</li>
+                    <li><strong>Data Management:</strong> Comprehensive food database with user-namespaced data, offline caching, and cloud sync</li>
+                    <li><strong>Privacy-First:</strong> Per-user data isolation, secure authentication, no cross-account data sharing</li>
+                </ul>
+
+                <h3>Key Services</h3>
+                <ul>
+                    <li><strong>DiaryService:</strong> Food logging and meal management</li>
+                    <li><strong>ScorecardService:</strong> Health anchor calculations and scoring algorithms</li>
+                    <li><strong>ChatService:</strong> AI coach conversation management</li>
+                    <li><strong>FoodOracleService:</strong> Intelligent food search and ranking</li>
+                    <li><strong>AntioxidantService:</strong> Phytonutrient and compound tracking</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>Development Journey</h2>
+                <p>As the sole developer, I built Ingestigate from concept to production, handling every aspect of the development:</p>
+
+                <h3>Product Design & Innovation</h3>
+                <ul>
+                    <li><strong>Six Health Anchors Framework:</strong> Developed a unique nutritional philosophy that goes beyond traditional calorie counting</li>
+                    <li><strong>AI-First Approach:</strong> Designed the entire user experience around intelligent automation - from photo analysis to personalized coaching</li>
+                    <li><strong>User-Centered Design:</strong> Created multiple themes, guided tours, and progressive feature discovery for optimal UX</li>
+                </ul>
+
+                <h3>Technical Execution</h3>
+                <ul>
+                    <li><strong>Database Architecture:</strong> Designed comprehensive PostgreSQL schema for users, diary entries, foods, and meal compositions</li>
+                    <li><strong>Edge Functions:</strong> Built 9 TypeScript serverless functions for AI processing (parsing, analysis, coaching, digests)</li>
+                    <li><strong>Frontend Development:</strong> 50,000+ lines of Flutter/Dart code with custom services, state management, and UI components</li>
+                    <li><strong>AI Integration:</strong> Crafted specialized prompts for nutrition-specific tasks and integrated OpenAI GPT throughout the app</li>
+                </ul>
+
+                <h3>Key Achievements</h3>
+                <ul>
+                    <li>Built production-ready app supporting iOS, Android, and Desktop from a single codebase</li>
+                    <li>Implemented real-time sync, offline capabilities, and cloud backup</li>
+                    <li>Created comprehensive food database with barcode scanning and photo analysis</li>
+                    <li>Designed privacy-first architecture with per-user data isolation</li>
+                    <li>Shipped v1.0.0+49 to private beta with active users</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>Current Status & Future Development</h2>
+                <p><strong>Status:</strong> Private Beta v1.0.0+49 (2025–present)</p>
+
+                <h3>Fully Functional Features</h3>
+                <ul>
+                    <li>Core food diary with multiple input methods (manual, barcode, photo, text parsing)</li>
+                    <li>Six Health Anchors analytics with daily and weekly reporting</li>
+                    <li>AI-powered coach with personalized guidance and Q&A</li>
+                    <li>Food Sage and Food Oracle discovery tools</li>
+                    <li>Comprehensive user profiles, settings, and dietary preferences</li>
+                    <li>Intolerance detection and supplement tracking</li>
+                    <li>Real-time cloud sync with offline capabilities</li>
+                </ul>
+
+                <h3>In Development</h3>
+                <ul>
+                    <li><strong>Antioxidant Codex:</strong> Advanced phytonutrient tracking with badge system</li>
+                    <li><strong>Challenge System:</strong> Nutrition challenges and gamification mechanics</li>
+                    <li><strong>Story Mode:</strong> Gamified nutrition education with narrative progression</li>
+                    <li><strong>Advanced ML Insights:</strong> Predictive analytics and personalized trend analysis</li>
+                    <li><strong>Social Features:</strong> Community recipe sharing and collaborative challenges</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>Impact & Vision</h2>
+                <p>Ingestigate represents a new approach to nutrition tracking - one that goes beyond calorie counting to focus on holistic health through the Six Health Anchors framework. By combining AI intelligence with privacy-first design, the app makes sophisticated nutritional analysis accessible to everyone.</p>
+
+                <h3>What Makes Ingestigate Different</h3>
+                <ul>
+                    <li><strong>Intelligence Without Friction:</strong> AI handles the complexity - users just snap photos or describe meals</li>
+                    <li><strong>Education Through Use:</strong> Every interaction teaches users about nutrition through personalized coaching</li>
+                    <li><strong>Privacy-First:</strong> All data is user-namespaced with no sharing between accounts or third parties</li>
+                    <li><strong>Holistic Health Focus:</strong> Six anchors framework addresses nutrition quality, not just quantity</li>
+                    <li><strong>Built for Real Life:</strong> Supports restaurant meals, home cooking, recipes, and everything in between</li>
+                </ul>
+
+                <p>The app is currently in private beta with active users benefiting from personalized nutrition insights, AI coaching, and comprehensive health analytics.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html#projects" class="btn btn-primary">← Back to Projects</a>
+                <a href="index.html#contact" class="btn btn-secondary" style="margin-left: 1rem;">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Xiamei Klancnik. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe demo sections
+        document.querySelectorAll('.demo-section, .feature-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

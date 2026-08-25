@@ -1,0 +1,40 @@
+/* ============================================================
+   THEME TOKENS - Pure Monochrome (Active)
+   ============================================================ */
+
+:root {
+  /* Pure Monochrome (Active) */
+  --bg: #0A0A0A;
+  --panel: #121212;
+  --text: #F5F5F5;
+  --muted: #A8A8A8;
+  --accent: #E8E8E8;
+  --accent-halo: #CCCCCC;
+  --accent-muted: #707070;
+}
+
+/* Alternative palettes (uncomment to switch) */
+
+/* Copper Ember + Charcoal
+:root {
+  --bg: #0A0C0F;
+  --panel: #101319;
+  --text: #F3EDE7;
+  --muted: #B7B1AA;
+  --accent: #D97745;
+  --accent-halo: #F4A261;
+  --accent-muted: #8A4B2E;
+}
+*/
+
+/* Emerald
+:root {
+  --bg: #06080B;
+  --panel: #0B0F15;
+  --text: #E8F1F5;
+  --muted: #99A3AD;
+  --accent: #16A34A;
+  --accent-halo: #34D399;
+  --accent-muted: #0F5132;
+}
+*/
