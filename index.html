@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Xiamei Klancnik - Data Scientist</title>
-<meta name="description" content="Applied data scientist with MSc Data Science (cum laude) and BSc Mathematics. Energy forecasting adopted by Province of Utrecht. Data analist at the Belastingdienst and founder of WoonBusters, a national rental-market data platform.">
+<meta name="description" content="Applied data scientist with MSc Data Science (cum laude) and BSc Mathematics. Forecasting and optimization work adopted by the Province of Utrecht. Data analist at the Belastingdienst and founder of WoonBusters, a national rental-market data platform.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xiameiklancnik.github.io/">
 <meta property="og:title" content="Xiamei Klancnik - Data Scientist • Building Society-Driven AI">
-<meta property="og:description" content="Delivering impact across energy policy, housing, and public good. Work adopted by Province of Utrecht for energy infrastructure planning.">
+<meta property="og:description" content="Machine learning for public-interest problems: housing, energy policy and government. Work adopted by the Province of Utrecht.">
 <meta property="og:image" content="https://xiameiklancnik.github.io/xiamei-2026.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -171,8 +171,8 @@
     </div>
     <div>
       <div class="eyebrow">Society-driven AI</div>
-      <h1>Forecasts for the grid, fairness for the <em>housing market.</em></h1>
-      <p class="lede">MSc Data Science (cum laude) and BSc Mathematics. My energy models steer infrastructure planning at the Province of Utrecht; my Bayesian rent model checks 55,000+ Dutch listings against the law every quarter. Currently data analist at the Belastingdienst and founder of WoonBusters.</p>
+      <h1>Machine learning that holds up <em>in production.</em></h1>
+      <p class="lede">MSc Data Science (cum laude) and BSc Mathematics. I build models end to end. My Bayesian rent model checks 55,000+ Dutch listings against the law every quarter, my language-model pipelines turn unstructured text into reliable data, and my forecasting work steers infrastructure planning at the Province of Utrecht. Currently data analist at the Belastingdienst and founder of WoonBusters.</p>
       <div class="hero-actions">
         <a class="btn btn-main" href="#work">See my work</a>
         <a class="btn btn-soft" href="Xiamei_Klancnik_CV.pdf" download>Download CV</a>
@@ -192,7 +192,7 @@
       <div class="card">
         <h3>Founder · WoonBusters</h3>
         <div class="meta">Oct 2025 – present · <a href="https://woonbusters.nl" style="color:var(--sage-deep)">woonbusters.nl</a></div>
-        <p>The full advertised Dutch rental market, monitored 24/7. Bayesian legal-rent model validated against the Huurcommissie's check, a public market report, and a B2B data API. Solo-built, solo-operated.</p>
+        <p>The full advertised Dutch rental market, monitored 24/7. Bayesian legal-rent model validated against the Huurcommissie's check, a public market report, and a B2B data API. Language models turn unstructured listing text into structured data. Solo-built, solo-operated.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">Bayesian modelling</span><span class="tag">LLM extraction</span><span class="tag">Scraping at scale</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Next.js / TypeScript</span><span class="tag">Linux &amp; systemd</span><span class="tag">Stripe</span><span class="tag">Geocoding</span></div>
       </div>
     </div>
@@ -270,12 +270,6 @@
     <h2><small>Selected work</small>Projects that shipped</h2>
     <div class="grid-3">
       <div class="card">
-        <h3>INNAX Energy Hubs</h3>
-        <div class="meta">Production · Province of Utrecht</div>
-        <p>End-to-end system behind the province's energy-hub scenarios and grid-congestion strategy. ETL pipelines on 15-minute resolution data, year-ahead forecasting integrating growth projections, weather and energy-price signals, and linear programming for cost-optimal battery and generator sizing with degradation constraints. Grid-hotspot analysis delivered as policy dashboards for provincial decision-makers.</p>
-        <div class="tags"><span class="tag">Forecasting</span><span class="tag">Linear optimization</span><span class="tag">ETL</span><span class="tag">Policy dashboards</span></div>
-      </div>
-      <div class="card">
         <h3>Bayesian Huurcheck</h3>
         <div class="meta">Production · WoonBusters</div>
         <p>Legal-maximum-rent estimation for 55,000+ listings per quarter, holdout-validated with calibrated confidence intervals against the official check.</p>
@@ -286,15 +280,21 @@
       <div class="card">
         <h3>Transfer Learning for Forecasting</h3>
         <div class="meta">MSc thesis · grade 8</div>
-        <p>Transfer learning consistently beats classical baselines and from-scratch deep models in limited-data regimes.</p>
-        <div class="tags"><span class="tag">Transformers</span><span class="tag">LSTM</span><span class="tag">LightGBM</span></div>
+        <p>Transformer models in PyTorch and Hugging Face for forecasting with little data. Transfer learning consistently beat classical baselines and deep models trained from scratch.</p>
+        <div class="tags"><span class="tag">Transformers</span><span class="tag">PyTorch</span><span class="tag">LSTM</span><span class="tag">LightGBM</span></div>
       </div>
       <div class="card">
-        <h3>Ingestigate</h3>
-        <div class="meta">Completed · solo</div>
-        <p>Nutrition intelligence app: LLM food analysis, holistic health framework, cross-platform iOS/Android. Shipped end-to-end with Flutter.</p>
-        <div class="tags"><span class="tag">LLM</span><span class="tag">Flutter</span><span class="tag">Edge Functions</span></div>
-        <a class="plink" href="ingestigate-demo.html">View demo →</a>
+        <h3>WorldVue AI</h3>
+        <div class="meta">Prototype · solo</div>
+        <p>Multilingual media-bias detection: CORE24 framework across 12 dimensions, XLM-RoBERTa entity framing, interactive world map.</p>
+        <div class="tags"><span class="tag">XLM-RoBERTa</span><span class="tag">NLP</span></div>
+        <a class="plink" href="worldvue-demo.html">View demo →</a>
+      </div>
+      <div class="card">
+        <h3>INNAX Energy Hubs</h3>
+        <div class="meta">Production · Province of Utrecht</div>
+        <p>End-to-end system behind the province's energy-hub scenarios and grid-congestion strategy. ETL pipelines on 15-minute resolution data, year-ahead forecasting integrating growth projections, weather and energy-price signals, and linear programming for cost-optimal battery and generator sizing with degradation constraints. Grid-hotspot analysis delivered as policy dashboards for provincial decision-makers.</p>
+        <div class="tags"><span class="tag">Forecasting</span><span class="tag">Linear optimization</span><span class="tag">ETL</span><span class="tag">Policy dashboards</span></div>
       </div>
       <div class="card">
         <h3>Metastasis prediction</h3>
@@ -303,11 +303,11 @@
         <div class="tags"><span class="tag">Monte Carlo</span><span class="tag">Healthcare ML</span></div>
       </div>
       <div class="card">
-        <h3>WorldVue AI</h3>
-        <div class="meta">Prototype · solo</div>
-        <p>Multilingual media-bias detection: CORE24 framework across 12 dimensions, XLM-RoBERTa entity framing, interactive world map.</p>
-        <div class="tags"><span class="tag">XLM-RoBERTa</span><span class="tag">NLP</span></div>
-        <a class="plink" href="worldvue-demo.html">View demo →</a>
+        <h3>Ingestigate</h3>
+        <div class="meta">Completed · solo</div>
+        <p>Nutrition intelligence app: LLM food analysis, holistic health framework, cross-platform iOS/Android. Shipped end-to-end with Flutter.</p>
+        <div class="tags"><span class="tag">LLM</span><span class="tag">Flutter</span><span class="tag">Edge Functions</span></div>
+        <a class="plink" href="ingestigate-demo.html">View demo →</a>
       </div>
     </div>
   </section>
@@ -343,7 +343,7 @@
         <div class="tl-item hl">
           <h4>MSc Data Science, cum laude</h4>
           <div class="when">Radboud University</div>
-          <p>Thesis: Transfer Learning for Limited-Data Forecasting (8). Statistical ML (8.5), Machine Learning (9), Law &amp; Technology (10).</p>
+          <p>Thesis: Transfer Learning for Limited-Data Forecasting (8). Statistical ML (8.5), Machine Learning (9), Law &amp; Technology (10), Text &amp; Multimedia Mining (8.5).</p>
         </div>
         <div class="tl-item">
           <h4>Pre-master Computer Science</h4>
@@ -362,11 +362,11 @@
     <h2><small>Toolbox</small>What I work with</h2>
     <div class="skill-band">
       <div class="sk"><h4>Modelling</h4><p>PyTorch, Transformers, LSTM, scikit-learn, LightGBM, Bayesian models, Monte Carlo, causal inference</p></div>
+      <div class="sk"><h4>LLMs &amp; agentic AI</h4><p>LLM extraction pipelines, agentic workflows (Claude Code, MCP), OpenAI API, RAG, embeddings, multilingual NLP</p></div>
       <div class="sk"><h4>Optimization</h4><p>Linear programming, scenario modelling, uncertainty analysis</p></div>
       <div class="sk"><h4>Languages</h4><p>Python, SQL, SAS, TypeScript, R, C++, Java</p></div>
       <div class="sk"><h4>Data engineering</h4><p>ETL, PostgreSQL, Teradata → DB2, async processing, web scraping at scale</p></div>
       <div class="sk"><h4>Production</h4><p>FastAPI, Docker, GitHub Actions, pytest, Linux &amp; systemd, Stripe</p></div>
-      <div class="sk"><h4>LLM applications</h4><p>OpenAI API, RAG, embeddings, multilingual NLP</p></div>
     </div>
   </section>
 
